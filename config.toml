@@ -126,7 +126,7 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:test@example.org"
+    link = "mailto:chunjie.sam.liu@gmail.com"
 
   [[params.social]]
     icon = "twitter"
@@ -136,7 +136,7 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "google-scholar"
     icon_pack = "ai"
-    link = ""
+    link = "//scholar.google.com/citations?user=IBIJfSwAAAAJ&hl=en"
 
   [[params.social]]
     icon = "github"
