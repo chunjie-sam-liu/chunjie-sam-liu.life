@@ -1,6 +1,6 @@
 baseurl = "/"  # End your URL with a `/` trailing slash.
 title = "Auto-Gog"
-copyright = "&copy; 2017 C.J. Liu"
+copyright = "&copy; 2017 Chun-Jie Liu"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
@@ -19,7 +19,7 @@ defaultContentLanguageInSubdir = false
   hrefTargetBlank = true
 
 [params]
-  name = "C.J. Liu"
+  name = "Chun-Jie Liu"
   role = "Ph.D. cancdidate of Bioinformatics & Genetics"
   organization = "HUST & UTH"
   organization_url = "http://bioinfo.life.hust.edu.cn/home_page#!/"
