@@ -1,6 +1,6 @@
 baseurl = "/"  # End your URL with a `/` trailing slash.
 languageCode = "en-us"
-title = "Auto-Gog"
+title = "Chun-Jie Liu"
 copyright = "&copy; 2017 Chun-Jie Liu"
 theme = "hugo-academic"
 enableEmoji = true
