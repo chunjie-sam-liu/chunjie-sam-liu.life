@@ -17,8 +17,9 @@ But some packages need to upgrade the R to >4.0.
 
 So, you have to re-isntall the r from source code, and set repo as "cloud.r-project.org", then the install.package will work by install from source code.
 
+```R
 $options(repos = c(CRAN = "cloud.r-project.org"))
-
+```
 
 First, you should uninstall the r from the server.
 
@@ -35,6 +36,7 @@ $ tar -zcvr R-3.4.0.tar.gz
 # ./configure
 
 It occurs errors.
+
 ```
 # apt-get install liblzma-dev
 # ./configure --enable-R-shlib --with-blas --with-lapack
@@ -46,6 +48,7 @@ It occurs errors.
 ```
 
 Third, install rstudio-server
+
 ```
 # rstudio-server verify-installation
 # rstudio-server start
