@@ -1,4 +1,4 @@
-baseurl = "https://shixiangwang.github.io/home/"
+baseurl = "/"
 RelativeURLs=true
 CanonifyURLs=true
 languageCode = "en-us"
