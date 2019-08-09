@@ -1,194 +1,84 @@
-baseurl = "/"  # End your URL with a `/` trailing slash.
+baseurl = "/"
+RelativeURLs=true
+CanonifyURLs=true
 languageCode = "en-us"
-title = "Chun-Jie Liu"
-copyright = "&copy; 2017 Chun-Jie Liu"
-theme = "hugo-academic"
-enableEmoji = true
-footnotereturnlinkcontents = "<sup>^</sup>"
-
-# Enable comments by entering your Disqus shortname
-disqusShortname = ""
-
-# Enable analytics by entering your Google Analytics tracking ID
+title = "Chun-Jie Liu | 柳纯洁"
+theme = "hugo-ivy"
 googleAnalytics = ""
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+hasCJKLanguage = true  # .WordCount works correctly for chinese
+enableEmoji = true
+preserveTaxonomyNames = true
+footnotereturnlinkcontents = "↩"
+MetaDataFormat = "yaml" # format of a new post
+enableGitInfo = false
 
-# Default language to use (if you setup multilingual support)
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+[[menu.main]]
+    name = "English"
+    url = "/en／"
+    weight = 1
 
-[blackfriday]
-  hrefTargetBlank = true
+[[menu.main]]
+    name = "中文"
+    url = "/cn/"
+    weight = 2
+
+[[menu.en]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[menu.en]]
+    name = "About"
+    url = "/en/about/"
+    weight = 2
+
+[[menu.en]]
+    name = "中文"
+    url = "/cn/"
+    weight = 7
+
+[[menu.cn]]
+    name = "首页"
+    url = "/"
+    weight = 1
+
+[[menu.cn]]
+    name = "关于"
+    url = "/cn/about/"
+    weight = 2
+
+[[menu.cn]]
+    name = "English"
+    url = "/en/"
+    weight = 9
+
+
 
 [params]
-  name = "Chun-Jie Liu"
-  role = "Ph.D. cancdidate of Bioinformatics & Genetics"
-  organization = "HUST & UTH"
-  organization_url = "http://bioinfo.life.hust.edu.cn/home_page#!/"
-  gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "chunjie.sam.liu@gmail.com"
-  address = "8181 Fannin St. Houston, TX, USA"
-  office_hours = ""
-  phone = ""
-  skype = ""
-  telegram = ""
+    description = "Window to Chun-Jie Liu"
+    disqusURL = "https://chunjie-sam-liu.life"
+    customJS = ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js", "js/external-link.js", "js/alt-title.js", "js/header-link.js"]
+    githubContentURL = "https://github.com/chunjie-sam-liu/chunjie-sam-liu.life/edit/master/content/"
 
-  # Enable Keybase in Contact section by entering your keybase.io username.
-  keybase = ""
+    highlightjsVersion = "9.12.0"
+    highlightjsLang = ["r", "yaml", "tex"]
+    highlightjsCDN = "//cdn.bootcss.com"
+    highlightjsTheme = "github"
+    dateFormat = "2006-01-02"
 
-  # Date format (refer to Go's date format: http://flippinggodateformat.com )
-  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "2018-01-01"
+[params.footer]
+    home = "Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Chun-Jie Liu](/) 2019 - "
+    en = "&copy; [Chun-Jie Liu](https://chunjie-sam-liu.life) 2019 | [Github](https://github.com/chunjie-sam-liu) | [Twitter](https://twitter.com/chunjiesamliu)"
+    cn = "&copy; [Chun-Jie Liu](https://chunjie-sam-liu.life) 2019 | [Github](https://github.com/chunjie-sam-liu) | [Twitter](https://twitter.com/chunjiesamliu)"
 
-  # Enable global LaTeX math rendering?
-  #   If false, you can enable it locally on a per page basis.
-  math = false
+[params.author]
+    en = "Chun-Jie Liu"
+    cn = "柳纯洁"
 
-  # Highlight.js options
-  #   highlight
-  #     Enable global source code highlighting?  If false, you can
-  #     override it for a particular page in that page's preamble.
-  #
-  #     Example: highlight = true
-  #
-  #   highlight_languages
-  #     Add support for highlighting additional languages. Support for
-  #     languages mentioned here will be included in all pages. You
-  #     can also set this variable for a particular page in that
-  #     page's preamble.
-  #
-  #     Example: highlight_languages = ["go", "lisp", "ocaml"]
-  #
-  #   highlight_style
-  #     Choose a different CSS style for highlighting source
-  #     code. Setting this option in a page's preamble has no
-  #     effect.
-  #
-  #     Example: highlight_style = "github-gist"
-  #
-  #   highlight_version
-  #     Choose the version of highlight.js you want. Setting this
-  #     option in a page's preamble has no effect.
-  #
-  #     Example: highlight_version = "9.9.0"
-  #
-  #   For the list of supported languages, styles, and versions, see:
-  #   https://cdnjs.com/libraries/highlight.js/
-  #
-  #   For more info on the highlighting options, see:
-  #   https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/#highlighting-options
-  highlight = true
-  highlight_languages = []
-  # highlight_style = "github"
-  # highlight_version = "9.9.0"
-
-  # Enable native social sharing buttons?
-  sharing = true
-
-  # Link custom CSS and JS assets
-  #   (relative to /static/css and /static/js respectively)
-  custom_css = []
-  custom_js  = []
-
-  # Publication types.
-  #   Used to categorize publications.
-  #   The index of the publication type in the list is used as its unique numerical identifier.
-  #   The numeric ID is used in a publication's frontmatter to categorize it.
-  #   The language can be edited below.
-  #   For multi-lingual sites, copy this block to each language section at the end of this file.
-  publication_types = [
-    'Uncategorized',  # 0
-    'Conference proceedings',  # 1
-    'Journal',  # 2
-    'Work in progress',  # 3
-    'Technical report',  # 4
-    'Book',  # 5
-    'Book chapter'  # 6
-  ]
-
-  # Social/Academic Networking
-  #
-  # Icon pack "fa" includes the following social network icons:
-  #
-  #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus,
-  #   youtube, instagram, soundcloud
-  #
-  #   For email icon, use "fa" icon pack, "envelope" icon, and
-  #   "mailto:your@email.com" as the link.
-  #
-  #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
-  #
-  # Icon pack "ai" includes the following academic network icons:
-  #
-  #   google-scholar, arxiv, orcid, researchgate, mendeley
-  #
-  #   Full list: https://jpswalsh.github.io/academicons/
-
-  [[params.social]]
-    icon = "envelope"
-    icon_pack = "fa"
-    link = "mailto:chunjie.sam.liu@gmail.com"
-
-  [[params.social]]
-    icon = "twitter"
-    icon_pack = "fa"
-    link = "//twitter.com/chunjie_sam_liu"
-
-  [[params.social]]
-    icon = "google-scholar"
-    icon_pack = "ai"
-    link = "//scholar.google.com/citations?user=IBIJfSwAAAAJ&hl=en"
-
-  [[params.social]]
-    icon = "github"
-    icon_pack = "fa"
-    link = "//github.com/chunjie-sam-liu"
-
-
-# Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-#     desired widget in your `content/home/` folder.
-#   The weight parameter defines the order that the links will appear in.
-
-[[menu.main]]
-  name = "Home"
-  url = "#about"
-  weight = 1
-
-[[menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
-  weight = 2
-
-[[menu.main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 3
-
-[[menu.main]]
-  name = "Projects"
-  url = "#projects"
-  weight = 4
-
-#[[menu.main]]
-#  name = "Teaching"
-#  url = "#teaching"
-#  weight = 5
-
-[[menu.main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 6
-
-# Taxonomies.
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-  publication_type = "publication_types"
-
-# Languages
-#   Create a [languages.X] block for each language you want, where X is the language ID.
-
-# Configure the English version of the website.
-[languages.en]
-  languageCode = "en-us"
+[params.logo.en]
+    img = "https://chunjie-sam-liu.life/img/donate.jpeg"
+    url = "/"
+    alt = "Chun-Jie Liu"
+    tag = ""
