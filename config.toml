@@ -70,7 +70,7 @@ enableGitInfo = false
     cn = "柳纯洁"
 
 [params.logo.en]
-    img = "https://chunjie-sam-liu.life/img/donate.jpeg"
+    img = "https://chunjie-sam-liu.life/img/avatars.jpeg"
     url = "/"
     alt = "Chun-Jie Liu"
     tag = ""

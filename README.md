@@ -1,1 +1,1 @@
-This site is created with [Hugo](https://gohugo.io) and [blogdown](https://bookdown.org/yihui/blogdown/), with the theme of [hugo-ivy](https://github.com/yihui/hugo-ivy). The source file of the website is hosted on [Github](https://github.com/ShixiangWang).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/18b1d2f6-f481-4508-b760-d42e162c8624/deploy-status)](https://app.netlify.com/sites/chunjie-sam-liu/deploys)
