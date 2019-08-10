@@ -61,9 +61,9 @@ enableGitInfo = false
     dateFormat = "2006-01-02"
 
 [params.footer]
-    home = "Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Chun-Jie Liu](/) 2019 - "
-    en = "&copy; [Chun-Jie Liu](https://chunjie-sam-liu.life) 2019 | [Github](https://github.com/chunjie-sam-liu) | [Twitter](https://twitter.com/chunjiesamliu)"
-    cn = "&copy; [Chun-Jie Liu](https://chunjie-sam-liu.life) 2019 | [Github](https://github.com/chunjie-sam-liu) | [Twitter](https://twitter.com/chunjiesamliu)"
+    home = "Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Chun-Jie Liu](/) 2019 - Present"
+    en = "[<i class='far fa-envelope fa-1x'></i>](mailto:chunjie.sam.liu@gmail.com) &middot; [<i class='fab fa-twitter fa-1x'></i>](https://twitter.com/chunjiesamliu) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/chunjie-sam-liu) &middot; [<i class='ai ai-google-scholar ai-1x'></i>](https://scholar.google.com/citations?user=IBIJfSwAAAAJ&hl=en) &middot; [<i class='ai ai-orcid ai-1x'></i>](https://orcid.org/0000-0002-3008-3375) &middot; [<i class='ai ai-researchgate ai-1x'></i>](https://www.researchgate.net/profile/Chun_Jie_Liu) <br> Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Chun-Jie Liu](/) 2019 - Present"
+    cn = "[<i class='far fa-envelope fa-1x'></i>](mailto:chunjie.sam.liu@gmail.com) &middot; [<i class='fab fa-twitter fa-1x'></i>](https://twitter.com/chunjiesamliu) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/chunjie-sam-liu) &middot; [<i class='ai ai-google-scholar ai-1x'></i>](https://scholar.google.com/citations?user=IBIJfSwAAAAJ&hl=en) &middot; [<i class='ai ai-orcid ai-1x'></i>](https://orcid.org/0000-0002-3008-3375) &middot; [<i class='ai ai-researchgate ai-1x'></i>](https://www.researchgate.net/profile/Chun_Jie_Liu) <br> Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Chun-Jie Liu](/) 2019 - Present"
 
 [params.author]
     en = "Chun-Jie Liu"

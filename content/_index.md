@@ -15,4 +15,3 @@ Life is but a dream, let me pour a libation to the river with moonlight gleam!
 >
 > 甚荒唐，到头来都是为他人作嫁衣裳。
 
-![my profile](img/avatars.jpg)
