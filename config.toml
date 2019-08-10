@@ -70,7 +70,7 @@ enableGitInfo = false
     cn = "柳纯洁"
 
 [params.logo.en]
-    img = "img/avatars.jpeg"
+    img = "https://www.gravatar.com/avatar/62cc939fa7f1f2537b4847c3eb69401f"
     url = "/"
     alt = "Chun-Jie Liu"
     tag = ""
