@@ -48,10 +48,10 @@ enableGitInfo = false
     url = '/cn/'
     weight = 5
 
-# [[menu.en]]
-#     name = "CV"
-#     url = "/en/cv-en/Shixiang"
-#     weight = 5
+[[menu.en]]
+    name = "CV"
+    url = "/en/cv-en/Chun-Jie"
+    weight = 6
 
 [[menu.main]]
     name = "中文"
@@ -78,10 +78,10 @@ enableGitInfo = false
     url = '/en/'
     weight = 4
 
-# [[menu.cn]]
-#     name = "简历"
-#     url = "/cn/cv-cn/Shixiang"
-#     weight = 4
+[[menu.cn]]
+    name = "简历"
+    url = "/cn/cv-cn/Chun-Jie"
+    weight = 5
 
 
 [params]
