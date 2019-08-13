@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Chun-Jie Liu | 柳纯洁</title>
+    <link>/en/</link>
+    <description>Recent content in Introduction on Chun-Jie Liu | 柳纯洁</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>/en/cv-en/chun-jie/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/cv-en/chun-jie/</guid>
+      <description>Chun-Jie Liu  Add: HUST, Wuhan, China Email: chunjie.sam.liu@gmail.com Personal website: https://chunjie-sam-liu.life  Education  2014.09 ~ 2018.06, Ph.D, HUST, Wuhan, China 2010.09 ~ 2014.06, B.E., HUST, Wuhan, China   Publications Periodicals   Liu, C. J., Hu, FF., Xia, M., Han, L., Zhang, Q. &amp;amp; Guo, A. Y. (2018). GSCALite: A Web Server for Gene Set Cancer Analysis. Bioinformatics. (PDF)    </description>
+    </item>
+    
+  </channel>
+</rss>
