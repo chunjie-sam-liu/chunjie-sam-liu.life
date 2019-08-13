@@ -33,6 +33,21 @@ enableGitInfo = false
     url = '/en/about/'
     weight = 2
 
+[[menu.en]]
+    name = "Blog"
+    url = '/en/post'
+    weight = 3
+
+[[menu.en]]
+    name = "Project"
+    url = '/en/project'
+    weight = 4
+
+[[menu.en]]
+    name = "CV"
+    url = "/en/cv-en/Shixiang"
+    weight = 5
+
 [[menu.main]]
     name = "中文"
     url = '/cn/'
@@ -47,6 +62,17 @@ enableGitInfo = false
     name = "关于"
     url = '/cn/about/'
     weight = 2
+
+[[menu.cn]]
+    name = "博客"
+    url = '/cn/post/'
+    weight = 3
+
+[[menu.cn]]
+    name = "简历"
+    url = "/cn/cv-cn/Shixiang"
+    weight = 4
+
 
 [params]
     description = "Window to Chun-Jie Liu"
