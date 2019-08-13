@@ -45,7 +45,7 @@ enableGitInfo = false
 
 [[menu.en]]
     name = "CV"
-    url = "/en/cv-en/Shixiang"
+    url = "/en/cv-en/Chun-Jie"
     weight = 5
 
 [[menu.en]]
@@ -75,7 +75,7 @@ enableGitInfo = false
 
 [[menu.cn]]
     name = "简历"
-    url = "/cn/cv-cn/Shixiang"
+    url = "/cn/cv-cn/Chun-Jie"
     weight = 4
 
 [[menu.cn]]

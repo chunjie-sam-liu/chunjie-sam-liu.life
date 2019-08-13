@@ -1,0 +1,51 @@
+---
+title: "简历"
+disable_comments: yes
+date: '2019-08-01'
+lastmod: "`r Sys.Date()`"
+output:
+  pdf_document:
+    includes:
+      in_header: cv-cn-header.tex
+    latex_engine: xelatex
+    md_extensions: -autolink_bare_uris+hard_line_breaks
+    template: cv-cn-template.latex
+  html_document:
+    df_print: paged
+  word_document: default
+geometry: margin=1in
+pdf: /cn/cv-cn/Chun-Jie.pdf
+type: cv
+urlcolor: blue
+fontsize: 10pt
+---
+
+# 柳纯洁
+
+- 地址：华中科技大学
+- 邮箱：<chunjie.sam.liu@gmail.com>
+- 个人网站：<https://chunjie-sam-liu.life>
+
+## 教育经历 
+
+- 2014.09 ~ 2018.06 <br>
+  华中科技大学，遗传学 & 生物信息学 博士
+
+- 2010.09 ~ 2014.06 <br>
+  华中科技大学，工学学士
+
+## 专业技能
+
+- 遗传。 
+- 生物信息。
+
+
+## 出版物
+
+1. 杂志论文
+
+- **Liu, C. J.**, Hu, FF., Xia, M., Han, L., Zhang, Q. & Guo, A. Y. (2018). GSCALite: A Web Server for Gene Set Cancer Analysis. *Bioinformatics*. <i class="fa fa-file-pdf-o"> [(PDF)](https://www.ncbi.nlm.nih.gov/pubmed/29790900)</i>
+
+
+
+
