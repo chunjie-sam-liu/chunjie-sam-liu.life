@@ -35,13 +35,18 @@ enableGitInfo = false
 
 [[menu.en]]
     name = "Blog"
-    url = '/en/post'
+    url = '/en/post/'
     weight = 3
 
 [[menu.en]]
     name = "Project"
-    url = '/en/project'
+    url = '/en/project/'
     weight = 4
+
+[[menu.en]]
+    name = "中文"
+    url = '/cn/'
+    weight = 5
 
 # [[menu.en]]
 #     name = "CV"
@@ -67,6 +72,11 @@ enableGitInfo = false
     name = "博客"
     url = '/cn/post/'
     weight = 3
+
+[[menu.cn]]
+    name = "English"
+    url = '/en/'
+    weight = 4
 
 # [[menu.cn]]
 #     name = "简历"
