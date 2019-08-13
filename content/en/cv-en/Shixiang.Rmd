@@ -20,7 +20,7 @@ urlcolor: blue
 fontsize: 10pt
 ---
 
-# Shixiang Wang
+# Chun-Jie Liu
 
 - Add: 233, Haike Rd., Pudong District, Shanghai 201210, China
 - Email: <w_shixiang@163.com>
@@ -37,9 +37,9 @@ fontsize: 10pt
 
 ## Professional skills
 
-- Statistics. I have moderate experience in using *R* for statistical modeling and data visualization. 
+- Statistics. I have moderate experience in using *R* for statistical modeling and data visualization.
 
-- Writing. I like to write with Markdown and R Markdown. 
+- Writing. I like to write with Markdown and R Markdown.
 
 ## Publications
 

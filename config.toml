@@ -44,13 +44,13 @@ enableGitInfo = false
     weight = 4
 
 [[menu.en]]
-    name = "中文"
-    url = '/cn/'
+    name = "CV"
+    url = "/en/cv-en/Shixiang"
     weight = 5
 
 [[menu.en]]
-    name = "CV"
-    url = "/en/cv-en/Chun-Jie"
+    name = "中文"
+    url = '/cn/'
     weight = 6
 
 [[menu.main]]
@@ -74,14 +74,16 @@ enableGitInfo = false
     weight = 3
 
 [[menu.cn]]
-    name = "English"
-    url = '/en/'
+    name = "简历"
+    url = "/cn/cv-cn/Shixiang"
     weight = 4
 
 [[menu.cn]]
-    name = "简历"
-    url = "/cn/cv-cn/Chun-Jie"
+    name = "English"
+    url = '/en/'
     weight = 5
+
+
 
 
 [params]
