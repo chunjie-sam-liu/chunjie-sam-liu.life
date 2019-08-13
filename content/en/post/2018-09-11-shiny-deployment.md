@@ -2,12 +2,6 @@
 title: "Shiny deployment"
 author: "Chun-Jie Liu"
 date: "2018-09-11"
-header:
-  caption: ''
-  image: ''
-slug: shiny-deployment
-tags: shiny
-categories: R
 ---
 
 
