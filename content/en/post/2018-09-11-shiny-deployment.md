@@ -33,7 +33,7 @@ ProxyPassReverse /web/ http://localhost:port/
 
 Edit `shiny-server.conf` with root rights with following code.
 
-Instruct Shiny Server to run applications as the user "shiny" run_as shiny; Define a server that listens on port port
+Instruct Shiny Server to run applications, as the user **shiny** run as shiny, And define a server that listens on port port
 
 ```
 server {
