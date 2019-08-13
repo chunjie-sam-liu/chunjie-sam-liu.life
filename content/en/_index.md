@@ -4,6 +4,30 @@ date: "2016-05-05"
 disable_comments: true
 ---
 
-The English version consists of a [brief introduction](/en/about/), a [Curriculum Vitae](/en/cv/lzhan/), the [courses](/en/teach/) Likan teaches, and an [English blog](/en/post/) Likan writes.
 
-All the pages in this site are written either with *markdown* or with *R markdown*. If the reader could help the author to correct the errors or to improve the content of this website by clicking the "Edit Me" button in the menu, he will be greatly appreciated.
+> This is Major Sam to Ground Control!
+>
+> I'm stepping through the door.
+>
+> And I'm floating in a most peculiar way.
+>
+> And the stars look very different today.
+>
+> For here.
+>
+> Am I sitting in a tin can.
+>
+> Far above the world.
+>
+> Planet Earth is blue.
+>
+> And there's nothing I can do.
+>
+> Though I'm past one hundred thousand miles.
+>
+> I'm feeling very still.
+>
+> And I think my spaceship knows which way to go.
+>
+> Tell my wife and daughter I love her very much.
+
