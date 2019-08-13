@@ -1,5 +1,5 @@
 ---
-title: "简介"
+title: "关于"
 date: "2019-08-01"
 disable_comments: true
 ---
