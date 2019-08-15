@@ -15,7 +15,7 @@ For me, not majored in CS, alwasy hard to comprehend some terms of hardware and 
 - Core: the unit of computation.
 - Pseudo-cores: can appear to the OS as multiple cores.
 
-![Sockets cores](./img/r-parallel/sockets-cores.png)
+![Sockets cores](../../../img/r-parallel/sockets-cores.png)
 
 ## Software terms
 
