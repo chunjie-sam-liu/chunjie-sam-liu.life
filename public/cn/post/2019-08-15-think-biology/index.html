@@ -12,10 +12,10 @@
     
     
     
-    <title>Install R from source code for ubuntu precise - Chun-Jie Liu</title>
+    <title>Think like a biologist - 柳纯洁</title>
     
      
-    <meta property="og:title" content="Install R from source code for ubuntu precise - Chun-Jie Liu | 柳纯洁">
+    <meta property="og:title" content="Think like a biologist - Chun-Jie Liu | 柳纯洁">
     
 
     
@@ -27,21 +27,19 @@
     
     
 
-
-<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
-
-
-
     <link rel="stylesheet" href="../../../css/style.css" />
     <link rel="stylesheet" href="../../../css/mystyle.css" /> 
     <link rel="stylesheet" href="../../../css/fonts.css" />
     
+<script async src="../../../js/load-typekit.js"></script>
+
+
 <link rel="stylesheet" href="../../../css/custom.css" />
 
   </head>
 
   
-  <body class="en">
+  <body class="cn">
     <header class="masthead">
       
 
@@ -59,17 +57,15 @@
         <ul>
         
         
-        <li><a href="../../../">Home</a></li>
+        <li><a href="../../../">首页</a></li>
         
-        <li><a href="../../../en/about/">About</a></li>
+        <li><a href="../../../cn/about/">关于</a></li>
         
-        <li><a href="../../../en/post/">Blog</a></li>
+        <li><a href="../../../cn/post/">博客</a></li>
         
-        <li><a href="../../../en/project/">Project</a></li>
+        <li><a href="../../../cn/cv-cn/chun-jie">简历</a></li>
         
-        <li><a href="../../../en/cv-en/chun-jie">CV</a></li>
-        
-        <li><a href="../../../cn/">中文</a></li>
+        <li><a href="../../../en/">English</a></li>
         
         
         </ul>
@@ -80,12 +76,12 @@
       <header class="title">
         
 
-<h1>Install R from source code for ubuntu precise</h1>
+<h1>Think like a biologist</h1>
 
 
 
 <h3>Chun-Jie Liu &middot 
-2018-09-11</h3> 
+2019-08-15</h3> 
 
 
    
@@ -95,53 +91,24 @@
       </header>
 
 
-<p>The newest CRAN does not support ubuntu precise anymore.</p>
 
-<p>But some packages need to upgrade the R to &gt; 4.0.</p>
 
-<p>So, you have to re-isntall the r from source code, and set repo as &ldquo;cloud.r-project.org&rdquo;, then the install.package will work by install from source code.</p>
+<h2 id="生物信息">生物信息</h2>
 
-<pre><code>options(repos = c(CRAN = &quot;cloud.r-project.org&quot;))
-</code></pre>
+<h2 id="生物学家思维逻辑">生物学家思维逻辑</h2>
 
-<p>First, you should uninstall the r from the server.</p>
+<h2 id="编程人员思维逻辑">编程人员思维逻辑</h2>
 
-<pre><code>apt-get --purge remove r-base
-apt-get --purge remove r-base-core
-apt-get --purge remove r-base-dev
-apt-get autoremove
-</code></pre>
+<h2 id="科学发现的故事性">科学发现的故事性</h2>
 
-<p>Then, download R source code from <a href="https://cran.r-project.org">https://cran.r-project.org</a></p>
-
-<pre><code>$ tar -zcvr R-3.4.0.tar.gz
-# cd R-3.4.0
-# ./configure
-</code></pre>
-
-<p>It occurs errors.</p>
-
-<pre><code>apt-get install liblzma-dev
-./configure --enable-R-shlib --with-blas --with-lapack
-make
-make check
-
-cp R-3.4.- /usr/local/src
-ln -s ../src/R-3.4.0/bin/R .
-</code></pre>
-
-<p>Third, install rstudio-server</p>
-
-<pre><code>rstudio-server verify-installation
-rstudio-server start
-</code></pre>
+<h2 id="小结">小结</h2>
 
 
   <footer>
   
 <nav class="post-nav">
-  <span class="nav-prev">&larr; <a href="../../../en/post/2018-09-11-shiny-deployment/">Shiny deployment</a></span>
-  <span class="nav-next"><a href="../../../en/post/2019-08-14-tumor-educated-platelet/">Tumor educated platelet</a> &rarr;</span>
+  <span class="nav-prev">&larr; <a href="../../../cn/post/2019-08-14-blogging/">博客 - 分享个人见解</a></span>
+  <span class="nav-next"></span>
 </nav>
 <script type="text/javascript">
 document.addEventListener('keyup', function(e) {
@@ -149,11 +116,9 @@ document.addEventListener('keyup', function(e) {
   var url = false;
   if (e.which == 37) {  
     
-    url = '\/en\/post\/2018-09-11-shiny-deployment\/';
+    url = '\/cn\/post\/2019-08-14-blogging\/';
     
   } else if (e.which == 39) {  
-    
-    url = '\/en\/post\/2019-08-14-tumor-educated-platelet\/';
     
   }
   if (url) window.location = url;
@@ -220,19 +185,6 @@ document.addEventListener('keyup', function(e) {
 <script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
   
-
-
-
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-
-
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
-<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
-
-
 
 
   

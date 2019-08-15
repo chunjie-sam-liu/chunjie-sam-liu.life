@@ -12,10 +12,10 @@
     
     
     
-    <title>Install R from source code for ubuntu precise - Chun-Jie Liu</title>
+    <title>R parallel computation - Chun-Jie Liu</title>
     
      
-    <meta property="og:title" content="Install R from source code for ubuntu precise - Chun-Jie Liu | 柳纯洁">
+    <meta property="og:title" content="R parallel computation - Chun-Jie Liu | 柳纯洁">
     
 
     
@@ -26,11 +26,6 @@
 
     
     
-
-
-<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
-
-
 
     <link rel="stylesheet" href="../../../css/style.css" />
     <link rel="stylesheet" href="../../../css/mystyle.css" /> 
@@ -80,12 +75,12 @@
       <header class="title">
         
 
-<h1>Install R from source code for ubuntu precise</h1>
+<h1>R parallel computation</h1>
 
 
 
 <h3>Chun-Jie Liu &middot 
-2018-09-11</h3> 
+2019-08-15</h3> 
 
 
    
@@ -95,53 +90,50 @@
       </header>
 
 
-<p>The newest CRAN does not support ubuntu precise anymore.</p>
 
-<p>But some packages need to upgrade the R to &gt; 4.0.</p>
 
-<p>So, you have to re-isntall the r from source code, and set repo as &ldquo;cloud.r-project.org&rdquo;, then the install.package will work by install from source code.</p>
+<blockquote>
+<p>For detailed parallelization, referring to <a href="https://github.com/ljdursi/beyond-single-core-R">Beyond single core R</a></p>
+</blockquote>
 
-<pre><code>options(repos = c(CRAN = &quot;cloud.r-project.org&quot;))
-</code></pre>
+<p>For me, not majored in CS, alwasy hard to comprehend some terms of hardware and software.</p>
 
-<p>First, you should uninstall the r from the server.</p>
+<h2 id="hardware-terms">Hardware terms</h2>
 
-<pre><code>apt-get --purge remove r-base
-apt-get --purge remove r-base-core
-apt-get --purge remove r-base-dev
-apt-get autoremove
-</code></pre>
+<ul>
+<li>Node: A single motherboard with multiple sockets.</li>
+<li>Processor/Socket: the silicon containing multiple cores.</li>
+<li>Core: the unit of computation.</li>
+<li>Pseudo-cores: can appear to the OS as multiple cores.</li>
+</ul>
 
-<p>Then, download R source code from <a href="https://cran.r-project.org">https://cran.r-project.org</a></p>
+<p><img src="./img/r-parallel/sockets-cores.png" alt="Sockets cores" /></p>
 
-<pre><code>$ tar -zcvr R-3.4.0.tar.gz
-# cd R-3.4.0
-# ./configure
-</code></pre>
+<h2 id="software-terms">Software terms</h2>
 
-<p>It occurs errors.</p>
+<p>Interpreted languages generally you can only directly work with processes. You can call libraries that invoke threads (BLAS/LAPACK)</p>
 
-<pre><code>apt-get install liblzma-dev
-./configure --enable-R-shlib --with-blas --with-lapack
-make
-make check
+<ul>
+<li>Process: data and code in memory.</li>
+<li>One or more threads of execution within a process.</li>
+<li>Threads in the same process can see most of the same memory.</li>
+<li>Processes generally can not peer into another processes memory.</li>
+</ul>
 
-cp R-3.4.- /usr/local/src
-ln -s ../src/R-3.4.0/bin/R .
-</code></pre>
+<h2 id="the-r-parallel-packages">The R parallel packages</h2>
 
-<p>Third, install rstudio-server</p>
-
-<pre><code>rstudio-server verify-installation
-rstudio-server start
-</code></pre>
+<ul>
+<li><code>parallel</code>: incorporates two pacakges below.</li>
+<li><code>multicore</code>: <strong>forking</strong>, for using all processors on a single processor.</li>
+<li><code>snow</code>: <strong>spawning</strong>, for using any group of processors, possibly across a cluster.</li>
+</ul>
 
 
   <footer>
   
 <nav class="post-nav">
-  <span class="nav-prev">&larr; <a href="../../../en/post/2018-09-11-shiny-deployment/">Shiny deployment</a></span>
-  <span class="nav-next"><a href="../../../en/post/2019-08-14-tumor-educated-platelet/">Tumor educated platelet</a> &rarr;</span>
+  <span class="nav-prev">&larr; <a href="../../../en/post/2019-08-14-jrocker/">Jrocker - Rstudio and Biocondutor docker</a></span>
+  <span class="nav-next"></span>
 </nav>
 <script type="text/javascript">
 document.addEventListener('keyup', function(e) {
@@ -149,11 +141,9 @@ document.addEventListener('keyup', function(e) {
   var url = false;
   if (e.which == 37) {  
     
-    url = '\/en\/post\/2018-09-11-shiny-deployment\/';
+    url = '\/en\/post\/2019-08-14-jrocker\/';
     
   } else if (e.which == 39) {  
-    
-    url = '\/en\/post\/2019-08-14-tumor-educated-platelet\/';
     
   }
   if (url) window.location = url;
@@ -220,19 +210,6 @@ document.addEventListener('keyup', function(e) {
 <script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
   
-
-
-
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-
-
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
-<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
-
-
 
 
   

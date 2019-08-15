@@ -1,7 +1,7 @@
 ---
-title: "Tumor educated platelet"
+title: "R parallel computation"
 author: "Chun-Jie Liu"
-date: "2019-08-14"
+date: "2019-08-15"
 ---
 
 > For detailed parallelization, referring to [Beyond single core R](https://github.com/ljdursi/beyond-single-core-R)
@@ -15,7 +15,7 @@ For me, not majored in CS, alwasy hard to comprehend some terms of hardware and 
 - Core: the unit of computation.
 - Pseudo-cores: can appear to the OS as multiple cores.
 
-![Sockets cores](./img/r-parallelization/sockets-cores.png)
+![Sockets cores](./img/r-parallel/sockets-cores.png)
 
 ## Software terms
 

@@ -11,5 +11,23 @@
 	<atom:link href="/cn/post/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Think like a biologist</title>
+      <link>/cn/post/2019-08-15-think-biology/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/post/2019-08-15-think-biology/</guid>
+      <description>生物信息 生物学家思维逻辑 编程人员思维逻辑 科学发现的故事性 小结</description>
+    </item>
+    
+    <item>
+      <title>博客 - 分享个人见解</title>
+      <link>/cn/post/2019-08-14-blogging/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/post/2019-08-14-blogging/</guid>
+      <description>建站 建立自己的个人博客站 博客 隐私 框架</description>
+    </item>
+    
   </channel>
 </rss>

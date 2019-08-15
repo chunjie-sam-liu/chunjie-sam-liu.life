@@ -12,6 +12,44 @@
     
     
     <item>
+      <title>R parallel computation</title>
+      <link>/en/post/2019-08-15-r-parallel-computation/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-08-15-r-parallel-computation/</guid>
+      <description>For detailed parallelization, referring to Beyond single core R
+ For me, not majored in CS, alwasy hard to comprehend some terms of hardware and software.
+Hardware terms  Node: A single motherboard with multiple sockets. Processor/Socket: the silicon containing multiple cores. Core: the unit of computation. Pseudo-cores: can appear to the OS as multiple cores.  Software terms Interpreted languages generally you can only directly work with processes.</description>
+    </item>
+    
+    <item>
+      <title>Jrocker - Rstudio and Biocondutor docker</title>
+      <link>/en/post/2019-08-14-jrocker/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-08-14-jrocker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RNA-Seq machine Learning</title>
+      <link>/en/post/2019-08-14-machine-learning-for-rna-seq/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-08-14-machine-learning-for-rna-seq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tumor educated platelet</title>
+      <link>/en/post/2019-08-14-tumor-educated-platelet/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-08-14-tumor-educated-platelet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Install R from source code for ubuntu precise</title>
       <link>/en/post/2018-09-11-install-r-from-source-code-for-ubuntu-precise/</link>
       <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>

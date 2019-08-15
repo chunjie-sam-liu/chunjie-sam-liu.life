@@ -12,10 +12,10 @@
     
     
     
-    <title>Install R from source code for ubuntu precise - Chun-Jie Liu</title>
+    <title>Jrocker - Rstudio and Biocondutor docker - Chun-Jie Liu</title>
     
      
-    <meta property="og:title" content="Install R from source code for ubuntu precise - Chun-Jie Liu | 柳纯洁">
+    <meta property="og:title" content="Jrocker - Rstudio and Biocondutor docker - Chun-Jie Liu | 柳纯洁">
     
 
     
@@ -26,11 +26,6 @@
 
     
     
-
-
-<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
-
-
 
     <link rel="stylesheet" href="../../../css/style.css" />
     <link rel="stylesheet" href="../../../css/mystyle.css" /> 
@@ -80,12 +75,12 @@
       <header class="title">
         
 
-<h1>Install R from source code for ubuntu precise</h1>
+<h1>Jrocker - Rstudio and Biocondutor docker</h1>
 
 
 
 <h3>Chun-Jie Liu &middot 
-2018-09-11</h3> 
+2019-08-14</h3> 
 
 
    
@@ -95,53 +90,13 @@
       </header>
 
 
-<p>The newest CRAN does not support ubuntu precise anymore.</p>
-
-<p>But some packages need to upgrade the R to &gt; 4.0.</p>
-
-<p>So, you have to re-isntall the r from source code, and set repo as &ldquo;cloud.r-project.org&rdquo;, then the install.package will work by install from source code.</p>
-
-<pre><code>options(repos = c(CRAN = &quot;cloud.r-project.org&quot;))
-</code></pre>
-
-<p>First, you should uninstall the r from the server.</p>
-
-<pre><code>apt-get --purge remove r-base
-apt-get --purge remove r-base-core
-apt-get --purge remove r-base-dev
-apt-get autoremove
-</code></pre>
-
-<p>Then, download R source code from <a href="https://cran.r-project.org">https://cran.r-project.org</a></p>
-
-<pre><code>$ tar -zcvr R-3.4.0.tar.gz
-# cd R-3.4.0
-# ./configure
-</code></pre>
-
-<p>It occurs errors.</p>
-
-<pre><code>apt-get install liblzma-dev
-./configure --enable-R-shlib --with-blas --with-lapack
-make
-make check
-
-cp R-3.4.- /usr/local/src
-ln -s ../src/R-3.4.0/bin/R .
-</code></pre>
-
-<p>Third, install rstudio-server</p>
-
-<pre><code>rstudio-server verify-installation
-rstudio-server start
-</code></pre>
 
 
   <footer>
   
 <nav class="post-nav">
-  <span class="nav-prev">&larr; <a href="../../../en/post/2018-09-11-shiny-deployment/">Shiny deployment</a></span>
-  <span class="nav-next"><a href="../../../en/post/2019-08-14-tumor-educated-platelet/">Tumor educated platelet</a> &rarr;</span>
+  <span class="nav-prev">&larr; <a href="../../../en/post/2019-08-14-machine-learning-for-rna-seq/">RNA-Seq machine Learning</a></span>
+  <span class="nav-next"><a href="../../../en/post/2019-08-15-r-parallel-computation/">R parallel computation</a> &rarr;</span>
 </nav>
 <script type="text/javascript">
 document.addEventListener('keyup', function(e) {
@@ -149,11 +104,11 @@ document.addEventListener('keyup', function(e) {
   var url = false;
   if (e.which == 37) {  
     
-    url = '\/en\/post\/2018-09-11-shiny-deployment\/';
+    url = '\/en\/post\/2019-08-14-machine-learning-for-rna-seq\/';
     
   } else if (e.which == 39) {  
     
-    url = '\/en\/post\/2019-08-14-tumor-educated-platelet\/';
+    url = '\/en\/post\/2019-08-15-r-parallel-computation\/';
     
   }
   if (url) window.location = url;
@@ -161,39 +116,6 @@ document.addEventListener('keyup', function(e) {
 </script>
 
 
-
-<section class="comments">
-  <div id="disqus_thread"></div>
-  <script src="../../../js/disqusloader.min.js"></script>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/chunjie-sam-liu.life" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//chunjie-sam-liu.disqus.com/embed.js';
-    
-    if (location.hash.match(/^#comment/)) {
-      var d = document, s = d.createElement('script');
-      s.src = disqus_js; s.async = true;
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    } else {
-      disqusLoader('#disqus_thread', {
-        scriptUrl: disqus_js, laziness: 0, disqusConfig: disqus_config
-      });
-    }
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
 
 
 
@@ -220,19 +142,6 @@ document.addEventListener('keyup', function(e) {
 <script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
   
-
-
-
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-
-
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
-<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
-
-
 
 
   

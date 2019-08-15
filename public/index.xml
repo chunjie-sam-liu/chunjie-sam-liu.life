@@ -12,6 +12,62 @@
     
     
     <item>
+      <title>R parallel computation</title>
+      <link>/en/post/2019-08-15-r-parallel-computation/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-08-15-r-parallel-computation/</guid>
+      <description>For detailed parallelization, referring to Beyond single core R
+ For me, not majored in CS, alwasy hard to comprehend some terms of hardware and software.
+Hardware terms  Node: A single motherboard with multiple sockets. Processor/Socket: the silicon containing multiple cores. Core: the unit of computation. Pseudo-cores: can appear to the OS as multiple cores.  Software terms Interpreted languages generally you can only directly work with processes.</description>
+    </item>
+    
+    <item>
+      <title>Think like a biologist</title>
+      <link>/cn/post/2019-08-15-think-biology/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/post/2019-08-15-think-biology/</guid>
+      <description>生物信息 生物学家思维逻辑 编程人员思维逻辑 科学发现的故事性 小结</description>
+    </item>
+    
+    <item>
+      <title>Jrocker - Rstudio and Biocondutor docker</title>
+      <link>/en/post/2019-08-14-jrocker/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-08-14-jrocker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RNA-Seq machine Learning</title>
+      <link>/en/post/2019-08-14-machine-learning-for-rna-seq/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-08-14-machine-learning-for-rna-seq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tumor educated platelet</title>
+      <link>/en/post/2019-08-14-tumor-educated-platelet/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-08-14-tumor-educated-platelet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博客 - 分享个人见解</title>
+      <link>/cn/post/2019-08-14-blogging/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/post/2019-08-14-blogging/</guid>
+      <description>建站 建立自己的个人博客站 博客 隐私 框架</description>
+    </item>
+    
+    <item>
       <title>Curriculum Vitae</title>
       <link>/en/cv-en/chun-jie/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
