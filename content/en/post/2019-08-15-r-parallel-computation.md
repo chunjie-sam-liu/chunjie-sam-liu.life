@@ -31,3 +31,5 @@ Interpreted languages generally you can only directly work with processes. You c
 - `parallel`: incorporates two pacakges below.
 - `multicore`: **forking**, for using all processors on a single processor.
 - `snow`: **spawning**, for using any group of processors, possibly across a cluster.
+
+## waiting for completing
