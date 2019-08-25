@@ -6,7 +6,7 @@ date: '2018-09-11'
 
 The newest CRAN does not support ubuntu precise anymore.
 
-But some packages need to upgrade the R to > 4.0.
+But some packages need to upgrade the R to > 3.4.0.
 
 So, you have to re-isntall the r from source code, and set repo as "cloud.r-project.org", then the install.package will work by install from source code.
 
