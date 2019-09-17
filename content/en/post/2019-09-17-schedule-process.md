@@ -1,7 +1,7 @@
 ---
 title: "Schedule process on linux"
 author: "Chun-Jie Liu"
-date: "2019-09-017"
+date: "2019-09-17"
 ---
 
 ## Scheduling tasks
