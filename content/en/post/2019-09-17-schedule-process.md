@@ -20,7 +20,7 @@ The above picture is the `crontab` rule to schedule periodically tasks. Followin
 */5 * * * * /etc/mysql/listen.sh
 ```
 
-> Following code is listen.sh
+> Following code is `listen.sh`
 
 ```shell
 #!/bin/bash
