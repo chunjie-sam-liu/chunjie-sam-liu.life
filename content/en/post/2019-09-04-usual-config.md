@@ -72,8 +72,9 @@ Host mgt
 	co = checkout
 	ss = status
 	cm = commit -m
-	br = branch -a
+	br = branch -a -vv
 	bd = branch -d
+  bu = branch -u
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	df = diff
 	mg = merge --no-ff -m
