@@ -74,7 +74,7 @@ Host mgt
 	cm = commit -m
 	br = branch -a -vv
 	bd = branch -d
-  bu = branch -u
+	bu = branch -u
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	df = diff
 	mg = merge --no-ff -m
@@ -85,6 +85,8 @@ Host mgt
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[pager]
+	branch = false
 ```
 
 
