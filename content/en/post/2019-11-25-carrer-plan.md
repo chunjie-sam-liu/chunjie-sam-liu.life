@@ -10,4 +10,6 @@ The questions above were asked to me by a my very good friend. I think a while a
 
 ## Story One
 
+A friend or senior fellow apprentice of mine has been being bothered to making decision about his carrer. He is an extraordinary bioinformatics engineer with outstanding skills and techniques. After his doctorial defense, he received three offers as postdoc fellow, one of which is from UThealth. He chose third one deliberately in a good hostipal. He
+
 ## Story Two
