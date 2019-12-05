@@ -14,5 +14,5 @@ A friend and senior fellow apprentice of mine has been being bothered to making 
 
 ## Story Two
 
-
+About the same period of time, I got an excellent college classmate information that she is gonging to McKinsey & Company. She is one of the most outstanding girl in our class at that time, and she got repaid for her hard work and conscientious attitude to every thing. She joined a famous lab known for neuroscience in Yale after graduate. Five yeas later, I was astonished by accident seeing her google scholar list with awesome publications. I thought she would be one of the famous scientists in the future, and come back to China with a lot of titles.
 
