@@ -4,9 +4,15 @@ author: "Chun-Jie Liu"
 date: "2019-11-18"
 ---
 
-Academic paper to be published.
+Before writing academic papers, you should know
+- Opinions
+- Highlights
+- Evidences
 
 ## Reading First
+
+
+## Key words and concepts
 
 
 ## Orgnize story
