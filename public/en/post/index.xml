@@ -12,6 +12,124 @@
     
     
     <item>
+      <title>Blink</title>
+      <link>/en/post/2019-12-26-blink/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-12-26-blink/</guid>
+      <description>I&amp;rsquo;m reading the book Blink by Malcolm Gladwell, this is the second book published in 2005 by Gladdwell. His new book Talking to Strangers was released September 2019. I read his book Outliers and David and Goliath published in 2008 and 2013 respectively three years ago.</description>
+    </item>
+    
+    <item>
+      <title>To be a good organizer</title>
+      <link>/en/post/2019-12-05-to-be-an-organizer/</link>
+      <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-12-05-to-be-an-organizer/</guid>
+      <description>Looking backward the period of one year being a postdoc, I find some flaws, though a lot of flaws root in me, that prohibit me to a good scientific researcher.</description>
+    </item>
+    
+    <item>
+      <title>Carrer Plan</title>
+      <link>/en/post/2019-11-25-carrer-plan/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-11-25-carrer-plan/</guid>
+      <description>Are you planing to do research all the time? What do you want from doing research, only for making story to get published?
+ The questions above were asked to me by a my very good friend. I think a while and then regard them as serious questions for deliberation. The key point in these two questions are about carrer plan. Before answering these questions directly, I want to share three stories from me and others.</description>
+    </item>
+    
+    <item>
+      <title>A letter to my little daughter</title>
+      <link>/en/post/2019-11-21-a-letter-to-my-daughter/</link>
+      <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-11-21-a-letter-to-my-daughter/</guid>
+      <description>My little daughter was born at June 21th 2019, today she is five month year old. I want to document something about her and my experience as a newbie father. This letter to her I hope she may read in future can understand her father in her growing up.
+This can be a series letters at the time points that my paradigm shift for bringing up little girl or misunderstanding occurs between us that I hove no idea how to talk to you directly.</description>
+    </item>
+    
+    <item>
+      <title>Academic writing</title>
+      <link>/en/post/2019-11-18-academic-writing/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-11-18-academic-writing/</guid>
+      <description> Before writing academic papers, you should know - Opinions - Highlights - Evidences
+Reading First Key words and concepts Orgnize story Structure </description>
+    </item>
+    
+    <item>
+      <title>A father of a daughter</title>
+      <link>/en/post/2019-10-28-be-a-father/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-10-28-be-a-father/</guid>
+      <description> Role perceptions Role play How to be a father </description>
+    </item>
+    
+    <item>
+      <title>Rivers of no return</title>
+      <link>/en/post/2019-10-03-rivers-of-no-return/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-10-03-rivers-of-no-return/</guid>
+      <description>In last one month, I read a novel named &amp;ldquo;Rivers of no return&amp;rdquo; by Ane. After finished reading, I wondered real history in novel of 1978 ~ 2008 about Chinese commercial reform and evolution. Another book &amp;lsquo;China Emerging 1978-2008&amp;rsquo; by Xiaobo Wu came to me. This book described the big commercial and politic news in each year with vivid story and comments.
+Rivers of no return This is the novel about three young men</description>
+    </item>
+    
+    <item>
+      <title>Schedule process on linux</title>
+      <link>/en/post/2019-09-17-schedule-process/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-09-17-schedule-process/</guid>
+      <description>Scheduling tasks Automating system maintenance and administration of web server save my life for managing our web server. Scheduling certain tasks to run periodically or one time to backup data and start/stop server at certain time. crontab and at are to service processes to fulfill the requirement of a server manager.
+Run periodically crontab The above picture is the crontab rule to schedule periodically tasks. Following code is an example to check MySQL status every five minutes.</description>
+    </item>
+    
+    <item>
+      <title>Configurations</title>
+      <link>/en/post/2019-09-04-usual-config/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-09-04-usual-config/</guid>
+      <description>The configuration files were deposited into my Gist, but the Gist access was blocked. In case of the not accessing, I copyed some configure files here.
+config in .ssh Host * TCPKeepAlive yes ServerAliveInterval 120 ServerAliveCountMax 5 Host guo-4 HostName ip User username Port port Host guo-10 HostName ip User username Port port ProxyJump guo-4 Host guo-3 HostName ip User username Port port ProxyJump guo-4 Host guo-1 HostName ip User username Port port ProxyJump guo-4 Host mgt HostName ip User username Port port  rstudio_bindings.</description>
+    </item>
+    
+    <item>
+      <title>Stubborn</title>
+      <link>/en/post/2019-09-02-stubborn/</link>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-09-02-stubborn/</guid>
+      <description> Stubborn When talking about word stubborn, what come into my mind is a picture that an old man argue agianst young boy with electronic products addiction. Maybe it&amp;rsquo;s my stereotype of old man. So I Google the stubborn, the very image below painted by Louis C Moeller depicts every well with stubborn.
+An anecdote Collaboration </description>
+    </item>
+    
+    <item>
+      <title>GitHub Actions</title>
+      <link>/en/post/2019-08-30-github-action/</link>
+      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-08-30-github-action/</guid>
+      <description>GitHub Actions GitHub actions is a automate build, test and deployment product. DockerHub provides automate building by connecting GitHub repo. However, the DockerHub limit the building storage and limit building time.
+Automate build and publish to DockerHub Use Jrocker as an exmaple to automate build and publish DockerHub. The code chunk as follows.
+on: push name: Build &amp;amp; Push containers jobs: dockerRegistry: name: Docker Registry runs-on: ubuntu-latest steps: - uses: actions/checkout@master - name: Docker Registry uses: actions/docker/login@master env: DOCKER_PASSWORD: ${{ secrets.</description>
+    </item>
+    
+    <item>
+      <title>Blogtrottr</title>
+      <link>/en/post/2019-08-28-blogtrottr/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/post/2019-08-28-blogtrottr/</guid>
+      <description>Try to do a little bit writing every night before bed, either writing a journal or a blog (hence I am restarting to blog again), even just for 2-10 min.
+ The words above are from X.S. Liu&amp;rsquo;s blog. Shirley is one of greatest scientists in the field of Bioinformatics. I have read almost all the blogs in X.S. Liu&amp;rsquo;s blog when I was in Leng&amp;rsquo;s Lab as a visiting Ph.</description>
+    </item>
+    
+    <item>
       <title>R parallel computation</title>
       <link>/en/post/2019-08-15-r-parallel-computation/</link>
       <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
@@ -28,16 +146,18 @@ Hardware terms  Node: A single motherboard with multiple sockets. Processor/Sock
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/en/post/2019-08-14-jrocker/</guid>
-      <description></description>
+      <description>Reproducibility Reproducibilities are the main issues in research. For wet biological experiments, though following the protocols of paper provided, sometimes, it&amp;rsquo;s hard to reproduce the same results. Data engineering paper provides code to reproduce the figures and tables, but as the working environment differences, often get unexpected results. Providing Docker image can partly solve the reproducible issues as Guinney states.
+Intention I manage several old Ubuntu server before 12.04 with codename precise which many resources don&amp;rsquo;t support the &amp;lsquo;precise&amp;rsquo;.</description>
     </item>
     
     <item>
-      <title>RNA-Seq machine Learning</title>
-      <link>/en/post/2019-08-14-machine-learning-for-rna-seq/</link>
+      <title>RNA-seq data analysis</title>
+      <link>/en/post/2019-08-24-rnaseq-analysis/</link>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/post/2019-08-14-machine-learning-for-rna-seq/</guid>
-      <description></description>
+      <guid>/en/post/2019-08-24-rnaseq-analysis/</guid>
+      <description>Major steps in RNA-seq data analysis.
+ Expression design. Quality control. Read alignment. Quantification of gene and transcript levels. Visualization. Differential gene expression. Alternative splicing. Functional analysis. Gene fusion detection. eQTL mapping.  A survey of best practices for RNA-seq data analysis</description>
     </item>
     
     <item>
@@ -56,7 +176,7 @@ Hardware terms  Node: A single motherboard with multiple sockets. Processor/Sock
       
       <guid>/en/post/2018-09-11-install-r-from-source-code-for-ubuntu-precise/</guid>
       <description>The newest CRAN does not support ubuntu precise anymore.
-But some packages need to upgrade the R to &amp;gt; 4.0.
+But some packages need to upgrade the R to &amp;gt; 3.4.0.
 So, you have to re-isntall the r from source code, and set repo as &amp;ldquo;cloud.r-project.org&amp;rdquo;, then the install.package will work by install from source code.
 options(repos = c(CRAN = &amp;quot;cloud.r-project.org&amp;quot;))  First, you should uninstall the r from the server.
 apt-get --purge remove r-base apt-get --purge remove r-base-core apt-get --purge remove r-base-dev apt-get autoremove  Then, download R source code from https://cran.</description>

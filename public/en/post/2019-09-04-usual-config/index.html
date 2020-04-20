@@ -12,10 +12,10 @@
     
     
     
-    <title>Jrocker - Rstudio and Biocondutor docker - Chun-Jie Liu</title>
+    <title>Configurations - Chun-Jie Liu</title>
     
      
-    <meta property="og:title" content="Jrocker - Rstudio and Biocondutor docker - Chun-Jie Liu | 柳纯洁">
+    <meta property="og:title" content="Configurations - Chun-Jie Liu | 柳纯洁">
     
 
     
@@ -80,12 +80,12 @@
       <header class="title">
         
 
-<h1>Jrocker - Rstudio and Biocondutor docker</h1>
+<h1>Configurations</h1>
 
 
 
 <h3>Chun-Jie Liu &middot 
-2019-08-14</h3> 
+2019-09-04</h3> 
 
 
    
@@ -97,61 +97,91 @@
 
 
 
-<h2 id="reproducibility">Reproducibility</h2>
+<p>The configuration files were deposited into my <a href="https://gist.github.com/chunjie-sam-liu">Gist</a>, but the <a href="https://gist.github.com/chunjie-sam-liu">Gist</a> access was blocked. In case of the not accessing, I copyed some configure files here.</p>
 
-<p>Reproducibilities are the main issues in research. For wet biological experiments, though following the protocols of paper provided, sometimes, it&rsquo;s hard to reproduce the same results. Data engineering paper provides code to reproduce the figures and tables, but as the working environment differences, often get unexpected results. Providing Docker image can partly solve the reproducible issues as <a href="https://www.nature.com/articles/nbt.4128?draft=collection">Guinney states</a>.</p>
+<h2 id="config-in-ssh">config in .ssh</h2>
 
-<h2 id="intention">Intention</h2>
+<pre><code class="language-shell">Host *
+  TCPKeepAlive yes
+  ServerAliveInterval 120
+  ServerAliveCountMax 5
 
-<p>I manage several old Ubuntu server before <strong>12.04</strong> with codename <strong>precise</strong> which many resources don&rsquo;t support the &lsquo;<strong>precise</strong>&rsquo;. For some reasons, I can not upgrade the OS. <code>R</code> and <code>Rstudio server</code> that I used in my daily life can not upgrade to <code>3.4.0</code> from system command as I wrote a <a href="2018-09-11-install-r-from-source-code-for-ubuntu-precise.md">blog before to install <code>R</code> from source</a>. The most painful thing is not upgrading <code>R</code> each time, it is the packages that takes long time to install. The intetion was wrote in the <a href="https://github.com/chunjie-sam-liu/jrocker">README</a> in <code>Jrocker</code> <code>GitHub</code> repo.</p>
+Host guo-4
+  HostName ip
+  User username
+  Port port
 
-<h2 id="jrocker">Jrocker</h2>
+Host guo-10
+  HostName ip
+  User username
+  Port port
+  ProxyJump guo-4
 
-<p><a href="https://github.com/chunjie-sam-liu/jrocker">Jrocker</a> is the combination of <code>Rstudio server</code>, <code>tidyverse suites</code>, <code>bioconducter</code> and the packages I used in my project.</p>
+Host guo-3
+  HostName ip
+  User username
+  Port port
+  ProxyJump guo-4
 
-<p>Reviewed the Biocondutor release core <a href="https://github.com/Bioconductor/bioc_docker/blob/master/out/release_core/Dockerfile"><code>Dockerfile</code></a> code, I plan to build personal running environment for myself <a href="https://hub.docker.com/r/chunjiesamliu/jrocker/">Jrocker</a>.</p>
+Host guo-1
+  HostName ip
+  User username
+  Port port
+  ProxyJump guo-4
 
-<ol>
-<li><p>No more using <a href="https://hub.docker.com/r/bioconductor/release_core2/">bioc base2 docker</a> as base image to construct <a href="https://hub.docker.com/r/chunjiesamliu/jrocker/">Jrocker</a>. Now using <a href="https://hub.docker.com/r/rocker/rstudio/"><code>rocker/rstudio</code></a> as base image.</p></li>
-
-<li><p>Outside packages are provided in the <a href="https://github.com/chunjie-sam-liu/jrocker/install-pkgs.R">install-pkgs.R</a>.</p></li>
-
-<li><p>For machine learning and deep learning project, it&rsquo;s hard to integrating the <a href="https://github.com/rstudio/keras">keras</a> into the <a href="https://hub.docker.com/r/chunjiesamliu/jrocker/">Jrocker</a>. Even though <em>JJ Allaire</em> provided a <a href="https://www.github.com/rocker-org/ml">machine learning docker image</a> based on <a href="https://hub.docker.com/r/rocker/rstudio/"><code>rocker/rstudio</code></a>, I cant reproduce the basic keras example on the <a href="https://keras.rstudio.com/index.html">keras tutorial</a>. Now I build a <code>TensorFlow</code> and <code>Keras</code> jupyter notebook basd on  <a href="https://github.com/jupyter/docker-stacks"><code>jupyter/scipy-notebook</code></a>, and name it as <a href="https://github.com/chunjie-sam-liu/jukeras"><code>Jukeras</code></a>. it works fine now.</p></li>
-</ol>
-
-<h2 id="run-jrocker">Run jrocker</h2>
-
-<pre><code class="language-shell">docker pull chunjiesamliu/jrocker:latest
-
-docker run -it --rm chunjiesamliu/jrocker /usr/local/bin/R
-
-docker run -it --rm chunjiesamliu/jrocker /bin/bash
+Host mgt
+  HostName ip
+  User username
+  Port port
 </code></pre>
 
-<h2 id="run-rstudio-server">Run rstudio server</h2>
+<h2 id="rstudio-bindings-json">rstudio_bindings.json</h2>
 
-<pre><code class="language-shell">docker run -d -p 8686:8787 \
-  -v /home/liucj/:/home/liucj/ \
-  -e USER=liucj -e PASSWORD=&lt;password&gt; \
-  -e USERID=$EUID -e ROOT=TRUE \
-  --name Jrocker chunjiesamliu/jrocker
+<pre><code class="language-json">{
+    &quot;commentUncomment&quot; : &quot;Cmd+/&quot;,
+    &quot;fold&quot; : &quot;Cmd+[|Alt+Cmd+L|Cmd+F1&quot;,
+    &quot;foldAll&quot; : &quot;Alt+Cmd+[&quot;,
+    &quot;goToFileFunction&quot; : &quot;Ctrl+/&quot;,
+    &quot;unfold&quot; : &quot;Cmd+]|Shift+Alt+Cmd+L|Shift+Cmd+F1&quot;,
+    &quot;unfoldAll&quot; : &quot;Alt+Cmd+]&quot;
+}
 </code></pre>
 
-<h2 id="run-r-scripts">Run R scripts</h2>
+<h2 id="gitconfig">.gitconfig</h2>
 
-<pre><code class="language-shell">docker run -i --rm --user $EUID \
-  --entrypoint /usr/local/bin/Rscript \
-  -v /your/path/:/docker/path/ \
-  chunjiesamliu/jrocker /docker/path/product.R
+<pre><code class="language-shell">[user]
+	name = chunjie-sam-liu
+	email = chunjie-sam-liu@foxmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	cl = clone
+	ad = add
+	co = checkout
+	ss = status
+	cm = commit -m
+	br = branch -a -vv
+	bd = branch -d
+	bu = branch -u
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit
+	df = diff
+	mg = merge --no-ff -m
+	rm = rm --cached
+	sv = status -v -v
+[filter &quot;lfs&quot;]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pager]
+	branch = false
 </code></pre>
 
-<h2 id="run-jrocker-for-multiple-sessions-with-no-conflict">Run Jrocker for multiple sessions with no conflict</h2>
+<h2 id="rproifle">.Rproifle</h2>
 
-<p>Rstudio server can run only one session, when you run one command with long time wait, you don&rsquo;t want to wait to run other command. So using <a href="https://github.com/chunjie-sam-liu/useful-scripts/blob/master/jrocker">jrocker</a> to open other several sessions with no conflict, then save the data as <code>dat.rds.gz</code> to load into your main rstudio session.</p>
-
-<h2 id="rprofile">Rprofile</h2>
-
-<pre><code class="language-r"># Blogdown options --------------------------------------------------------
+<pre><code class="language-R"># Blogdown options --------------------------------------------------------
 options(blogdown.author = &quot;Chun-Jie Liu&quot;)
 options(servr.daemon = FALSE)
 options(blogdown.ext = &quot;.Rmd&quot;)
@@ -184,8 +214,8 @@ options(
   <footer>
   
 <nav class="post-nav">
-  <span class="nav-prev">&larr; <a href="../../../en/post/2019-08-24-rnaseq-analysis/">RNA-seq data analysis</a></span>
-  <span class="nav-next"><a href="../../../en/post/2019-08-15-r-parallel-computation/">R parallel computation</a> &rarr;</span>
+  <span class="nav-prev">&larr; <a href="../../../en/post/2019-09-02-stubborn/">Stubborn</a></span>
+  <span class="nav-next"><a href="../../../en/post/2019-09-17-schedule-process/">Schedule process on linux</a> &rarr;</span>
 </nav>
 <script type="text/javascript">
 document.addEventListener('keyup', function(e) {
@@ -193,11 +223,11 @@ document.addEventListener('keyup', function(e) {
   var url = false;
   if (e.which == 37) {  
     
-    url = '\/en\/post\/2019-08-24-rnaseq-analysis\/';
+    url = '\/en\/post\/2019-09-02-stubborn\/';
     
   } else if (e.which == 39) {  
     
-    url = '\/en\/post\/2019-08-15-r-parallel-computation\/';
+    url = '\/en\/post\/2019-09-17-schedule-process\/';
     
   }
   if (url) window.location = url;

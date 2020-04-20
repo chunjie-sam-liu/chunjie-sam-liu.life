@@ -12,10 +12,10 @@
     
     
     
-    <title>Think like a biologist - 柳纯洁</title>
+    <title>Schedule process on linux - Chun-Jie Liu</title>
     
      
-    <meta property="og:title" content="Think like a biologist - Chun-Jie Liu | 柳纯洁">
+    <meta property="og:title" content="Schedule process on linux - Chun-Jie Liu | 柳纯洁">
     
 
     
@@ -27,19 +27,21 @@
     
     
 
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
     <link rel="stylesheet" href="../../../css/style.css" />
     <link rel="stylesheet" href="../../../css/mystyle.css" /> 
     <link rel="stylesheet" href="../../../css/fonts.css" />
     
-<script async src="../../../js/load-typekit.js"></script>
-
-
 <link rel="stylesheet" href="../../../css/custom.css" />
 
   </head>
 
   
-  <body class="cn">
+  <body class="en">
     <header class="masthead">
       
 
@@ -57,15 +59,17 @@
         <ul>
         
         
-        <li><a href="../../../">首页</a></li>
+        <li><a href="../../../">Home</a></li>
         
-        <li><a href="../../../cn/about/">关于</a></li>
+        <li><a href="../../../en/about/">About</a></li>
         
-        <li><a href="../../../cn/post/">博客</a></li>
+        <li><a href="../../../en/post/">Blog</a></li>
         
-        <li><a href="../../../cn/cv-cn/chun-jie">简历</a></li>
+        <li><a href="../../../en/project/">Project</a></li>
         
-        <li><a href="../../../en/">English</a></li>
+        <li><a href="../../../en/cv-en/chun-jie">CV</a></li>
+        
+        <li><a href="../../../cn/">中文</a></li>
         
         
         </ul>
@@ -76,12 +80,12 @@
       <header class="title">
         
 
-<h1>Think like a biologist</h1>
+<h1>Schedule process on linux</h1>
 
 
 
 <h3>Chun-Jie Liu &middot 
-2019-08-15</h3> 
+2019-09-17</h3> 
 
 
    
@@ -93,22 +97,70 @@
 
 
 
-<h2 id="生物信息">生物信息</h2>
+<h2 id="scheduling-tasks">Scheduling tasks</h2>
 
-<h2 id="生物学家思维逻辑">生物学家思维逻辑</h2>
+<p>Automating system maintenance and administration of web server save my life for managing our web server. Scheduling certain tasks to run periodically or one time to backup data and start/stop server at certain time. <code>crontab</code> and <code>at</code> are to service processes to fulfill the requirement of a server manager.</p>
 
-<h2 id="编程人员思维逻辑">编程人员思维逻辑</h2>
+<h2 id="run-periodically-crontab">Run periodically <code>crontab</code></h2>
 
-<h2 id="科学发现的故事性">科学发现的故事性</h2>
+<p><img src="../../../img/misc-imgs/crontab-time.png" alt="Time format" /></p>
 
-<h2 id="小结">小结</h2>
+<p>The above picture is the <code>crontab</code> rule to schedule periodically tasks. Following code is an example to check <code>MySQL</code> status every five minutes.</p>
+
+<pre><code class="language-shell"># add in crontab
+# crontab -e with root
+*/5 * * * * /etc/mysql/listen.sh
+</code></pre>
+
+<blockquote>
+<p>Following code is <code>listen.sh</code></p>
+</blockquote>
+
+<pre><code class="language-shell">#!/bin/bash
+#apache
+HTTP_CODE=`curl -o /dev/null -s -w &quot;%{http_code}&quot; &quot;http://example.com&quot;`
+if [ $HTTP_CODE != 200 ]; then
+    echo $HTTP_CODE&gt;&gt; /var/log/mysql_listen.log
+    service apache2 start
+else
+    echo &quot;lab server running&quot;&gt;&gt; /var/log/mysql_listen.log
+fi
+
+#mysql
+pgrep mysqld &amp;&gt; /dev/null
+if [ $? -gt 0 ]; then
+    echo &quot;`date` mysql is stop&quot;&gt;&gt; /var/log/mysql_listen.log
+    service mysql start
+else
+    echo &quot;`date` mysql running&quot;&gt;&gt; /var/log/mysql_listen.log
+fi
+
+#mongodb
+netstat -anop | grep localhost:port
+if [ $? -ne 1 ]; then
+    echo &quot;`date` mongodb running&quot;&gt;&gt; /var/log/mongodb_listen.log
+else
+    echo $(date +%T%n%F)&quot; Restart mongodb Services &quot; &gt;&gt; /var/log/mongodb_listen.log
+    service mongod restart
+fi
+</code></pre>
+
+<h2 id="run-one-time-task-at">Run one time task <code>at</code></h2>
+
+<p>Schedule certain time to start/stop <code>apache</code> service.</p>
+
+<pre><code class="language-shell"># schedule one time process for stop apache2 at 06:00 2019-09-18
+echo &quot;/usr/sbin/service apache2 stop&quot; | at -m 06:00 2019-09-18
+# schedule one time process for start apache2 at 14:00 2019-09-20
+echo &quot;/usr/sbin/service apache2 start&quot; | at -m 14:00 2019-09-20
+</code></pre>
 
 
   <footer>
   
 <nav class="post-nav">
-  <span class="nav-prev">&larr; <a href="../../../cn/post/2019-08-14-blogging/">博客 - 分享个人见解</a></span>
-  <span class="nav-next"><a href="../../../cn/post/2019-08-16-darkest-hour/">至暗时刻</a> &rarr;</span>
+  <span class="nav-prev">&larr; <a href="../../../en/post/2019-09-04-usual-config/">Configurations</a></span>
+  <span class="nav-next"><a href="../../../en/post/2019-10-03-rivers-of-no-return/">Rivers of no return</a> &rarr;</span>
 </nav>
 <script type="text/javascript">
 document.addEventListener('keyup', function(e) {
@@ -116,11 +168,11 @@ document.addEventListener('keyup', function(e) {
   var url = false;
   if (e.which == 37) {  
     
-    url = '\/cn\/post\/2019-08-14-blogging\/';
+    url = '\/en\/post\/2019-09-04-usual-config\/';
     
   } else if (e.which == 39) {  
     
-    url = '\/cn\/post\/2019-08-16-darkest-hour\/';
+    url = '\/en\/post\/2019-10-03-rivers-of-no-return\/';
     
   }
   if (url) window.location = url;
@@ -187,6 +239,19 @@ document.addEventListener('keyup', function(e) {
 <script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
   
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
 
   

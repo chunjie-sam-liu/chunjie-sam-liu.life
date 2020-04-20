@@ -12,10 +12,10 @@
     
     
     
-    <title>Think like a biologist - 柳纯洁</title>
+    <title>R parallel computation - Chun-Jie Liu</title>
     
      
-    <meta property="og:title" content="Think like a biologist - Chun-Jie Liu | 柳纯洁">
+    <meta property="og:title" content="R parallel computation - Chun-Jie Liu | 柳纯洁">
     
 
     
@@ -31,15 +31,12 @@
     <link rel="stylesheet" href="../../../css/mystyle.css" /> 
     <link rel="stylesheet" href="../../../css/fonts.css" />
     
-<script async src="../../../js/load-typekit.js"></script>
-
-
 <link rel="stylesheet" href="../../../css/custom.css" />
 
   </head>
 
   
-  <body class="cn">
+  <body class="en">
     <header class="masthead">
       
 
@@ -57,15 +54,17 @@
         <ul>
         
         
-        <li><a href="../../../">首页</a></li>
+        <li><a href="../../../">Home</a></li>
         
-        <li><a href="../../../cn/about/">关于</a></li>
+        <li><a href="../../../en/about/">About</a></li>
         
-        <li><a href="../../../cn/post/">博客</a></li>
+        <li><a href="../../../en/post/">Blog</a></li>
         
-        <li><a href="../../../cn/cv-cn/chun-jie">简历</a></li>
+        <li><a href="../../../en/project/">Project</a></li>
         
-        <li><a href="../../../en/">English</a></li>
+        <li><a href="../../../en/cv-en/chun-jie">CV</a></li>
+        
+        <li><a href="../../../cn/">中文</a></li>
         
         
         </ul>
@@ -76,7 +75,7 @@
       <header class="title">
         
 
-<h1>Think like a biologist</h1>
+<h1>R parallel computation</h1>
 
 
 
@@ -93,22 +92,50 @@
 
 
 
-<h2 id="生物信息">生物信息</h2>
+<blockquote>
+<p>For detailed parallelization, referring to <a href="https://github.com/ljdursi/beyond-single-core-R">Beyond single core R</a></p>
+</blockquote>
 
-<h2 id="生物学家思维逻辑">生物学家思维逻辑</h2>
+<p>For me, not majored in CS, alwasy hard to comprehend some terms of hardware and software.</p>
 
-<h2 id="编程人员思维逻辑">编程人员思维逻辑</h2>
+<h2 id="hardware-terms">Hardware terms</h2>
 
-<h2 id="科学发现的故事性">科学发现的故事性</h2>
+<ul>
+<li>Node: A single motherboard with multiple sockets.</li>
+<li>Processor/Socket: the silicon containing multiple cores.</li>
+<li>Core: the unit of computation.</li>
+<li>Pseudo-cores: can appear to the OS as multiple cores.</li>
+</ul>
 
-<h2 id="小结">小结</h2>
+<p><img src="../../../img/r-parallel/sockets-cores.png" alt="Sockets cores" /></p>
+
+<h2 id="software-terms">Software terms</h2>
+
+<p>Interpreted languages generally you can only directly work with processes. You can call libraries that invoke threads (BLAS/LAPACK)</p>
+
+<ul>
+<li>Process: data and code in memory.</li>
+<li>One or more threads of execution within a process.</li>
+<li>Threads in the same process can see most of the same memory.</li>
+<li>Processes generally can not peer into another processes memory.</li>
+</ul>
+
+<h2 id="the-r-parallel-packages">The R parallel packages</h2>
+
+<ul>
+<li><code>parallel</code>: incorporates two pacakges below.</li>
+<li><code>multicore</code>: <strong>forking</strong>, for using all processors on a single processor.</li>
+<li><code>snow</code>: <strong>spawning</strong>, for using any group of processors, possibly across a cluster.</li>
+</ul>
+
+<h2 id="waiting-for-completing">waiting for completing</h2>
 
 
   <footer>
   
 <nav class="post-nav">
-  <span class="nav-prev">&larr; <a href="../../../cn/post/2019-08-14-blogging/">博客 - 分享个人见解</a></span>
-  <span class="nav-next"><a href="../../../cn/post/2019-08-16-darkest-hour/">至暗时刻</a> &rarr;</span>
+  <span class="nav-prev">&larr; <a href="../../../en/post/2019-08-14-jrocker/">Jrocker - Rstudio and Biocondutor docker</a></span>
+  <span class="nav-next"><a href="../../../en/post/2019-08-28-blogtrottr/">Blogtrottr</a> &rarr;</span>
 </nav>
 <script type="text/javascript">
 document.addEventListener('keyup', function(e) {
@@ -116,11 +143,11 @@ document.addEventListener('keyup', function(e) {
   var url = false;
   if (e.which == 37) {  
     
-    url = '\/cn\/post\/2019-08-14-blogging\/';
+    url = '\/en\/post\/2019-08-14-jrocker\/';
     
   } else if (e.which == 39) {  
     
-    url = '\/cn\/post\/2019-08-16-darkest-hour\/';
+    url = '\/en\/post\/2019-08-28-blogtrottr\/';
     
   }
   if (url) window.location = url;

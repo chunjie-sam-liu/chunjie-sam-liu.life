@@ -12,10 +12,10 @@
     
     
     
-    <title>Think like a biologist - 柳纯洁</title>
+    <title>科学上网 - 柳纯洁</title>
     
      
-    <meta property="og:title" content="Think like a biologist - Chun-Jie Liu | 柳纯洁">
+    <meta property="og:title" content="科学上网 - Chun-Jie Liu | 柳纯洁">
     
 
     
@@ -26,6 +26,11 @@
 
     
     
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
 
     <link rel="stylesheet" href="../../../css/style.css" />
     <link rel="stylesheet" href="../../../css/mystyle.css" /> 
@@ -76,12 +81,12 @@
       <header class="title">
         
 
-<h1>Think like a biologist</h1>
+<h1>科学上网</h1>
 
 
 
 <h3>Chun-Jie Liu &middot 
-2019-08-15</h3> 
+2019-08-28</h3> 
 
 
    
@@ -91,24 +96,53 @@
       </header>
 
 
+<p>科学上网很多个人博客都有分享，但是每隔一段时间会被删除，就算<a href="https://github.com/shadowsocks/shadowsocks">GitHub shadowsocks</a>也需要做一个<code>rm branch</code>。应该遵守国家相关法律法规，科学上网。</p>
 
+<p>但是，奈何<code>百度</code>有毒，阻碍有效搜索结果。并且，很多时候使用高效搜索都是因为需要<code>google scholar</code>高效搜索需要的文献。由于此Blog的受众应该是小众的科学工作者，在此分享一下在<code>VPS</code>上部署<code>ss</code>。</p>
 
-<h2 id="生物信息">生物信息</h2>
+<p><a href="https://github.com/chunjie-sam-liu/useful-scripts/blob/master/ss-deployment.sh">代码</a>是从多种不同的地方看到的，在此汇总一下，方便<code>VPS</code>的快速部署。在使用的过程中由于无法通过<code>ipv4</code>来访问<code>google scholar</code>，需要开启<code>ipv6</code>，同时将<code>ipv6</code>添加到<code>hosts</code>里面。</p>
 
-<h2 id="生物学家思维逻辑">生物学家思维逻辑</h2>
+<pre><code class="language-shell"># get shadowsocks
+wget https://raw.githubusercontent.com/chunjie-sam-liu/useful-scripts/master/ss.sh
 
-<h2 id="编程人员思维逻辑">编程人员思维逻辑</h2>
+# install shadowsocks
+chmod a+x ss.sh
+bash ss.sh
+# specify password: password
+# connecting port: 1070
+# encryption: aes-256-cfb - 7
 
-<h2 id="科学发现的故事性">科学发现的故事性</h2>
+# open filewall
+firewall-cmd --permanent --zone=public --add-port=1070/tcp
+firewall-cmd --reload
 
-<h2 id="小结">小结</h2>
+# echo ipv4
+echo &quot;echo 3 &gt; /proc/sys/net/ipv4/tcp_fastopen&quot; &gt;&gt; /etc/rc.local
+echo &quot;net.ipv4.tcp_fastopen = 3&quot; &gt;&gt; /etc/sysctl.conf
+
+# restart shadowsocks
+/etc/init.d/shadowsocks restart
+
+# google scholar ipv6
+echo &quot;2404:6800:4008:c06::be scholar.google.com&quot; &gt;&gt; /etc/hosts
+echo &quot;2404:6800:4008:c06::be scholar.google.com.hk&quot; &gt;&gt; /etc/hosts
+echo &quot;2404:6800:4008:c06::be scholar.google.com.tw&quot; &gt;&gt; /etc/hosts
+
+# restart shadowsocks
+/etc/init.d/shadowsocks restart
+
+# run bbr
+wget --no-check-certificate https://raw.githubusercontent.com/chunjie-sam-liu/useful-scripts/master/ss-bbr.sh
+chmod +x ss-bbr.sh
+bash ss-bbr.sh
+</code></pre>
 
 
   <footer>
   
 <nav class="post-nav">
-  <span class="nav-prev">&larr; <a href="../../../cn/post/2019-08-14-blogging/">博客 - 分享个人见解</a></span>
-  <span class="nav-next"><a href="../../../cn/post/2019-08-16-darkest-hour/">至暗时刻</a> &rarr;</span>
+  <span class="nav-prev">&larr; <a href="../../../cn/post/2019-08-16-darkest-hour/">至暗时刻</a></span>
+  <span class="nav-next"></span>
 </nav>
 <script type="text/javascript">
 document.addEventListener('keyup', function(e) {
@@ -116,11 +150,9 @@ document.addEventListener('keyup', function(e) {
   var url = false;
   if (e.which == 37) {  
     
-    url = '\/cn\/post\/2019-08-14-blogging\/';
+    url = '\/cn\/post\/2019-08-16-darkest-hour\/';
     
   } else if (e.which == 39) {  
-    
-    url = '\/cn\/post\/2019-08-16-darkest-hour\/';
     
   }
   if (url) window.location = url;
@@ -187,6 +219,19 @@ document.addEventListener('keyup', function(e) {
 <script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
   
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
 
   
