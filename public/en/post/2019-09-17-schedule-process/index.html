@@ -3,18 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../../fonts/academicons-1.8.6/css/academicons.min.css"/>
     <link rel="icon" type="image/png" sizes="32x32" href="../../../logo/avatars.jpg"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    
     <title>Schedule process on linux - Chun-Jie Liu</title>
-    
-     
     <meta property="og:title" content="Schedule process on linux - Chun-Jie Liu | 柳纯洁">
     
 
@@ -33,7 +29,6 @@
 
 
     <link rel="stylesheet" href="../../../css/style.css" />
-    <link rel="stylesheet" href="../../../css/mystyle.css" /> 
     <link rel="stylesheet" href="../../../css/fonts.css" />
     
 <link rel="stylesheet" href="../../../css/custom.css" />
@@ -71,7 +66,6 @@
         
         <li><a href="../../../cn/">中文</a></li>
         
-        
         </ul>
       </nav>
     </header>
@@ -95,66 +89,51 @@
       </header>
 
 
-
-
 <h2 id="scheduling-tasks">Scheduling tasks</h2>
-
 <p>Automating system maintenance and administration of web server save my life for managing our web server. Scheduling certain tasks to run periodically or one time to backup data and start/stop server at certain time. <code>crontab</code> and <code>at</code> are to service processes to fulfill the requirement of a server manager.</p>
-
 <h2 id="run-periodically-crontab">Run periodically <code>crontab</code></h2>
-
-<p><img src="../../../img/misc-imgs/crontab-time.png" alt="Time format" /></p>
-
+<p><img src="../../../img/misc-imgs/crontab-time.png" alt="Time format"></p>
 <p>The above picture is the <code>crontab</code> rule to schedule periodically tasks. Following code is an example to check <code>MySQL</code> status every five minutes.</p>
-
-<pre><code class="language-shell"># add in crontab
-# crontab -e with root
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># add in crontab</span>
+<span style="color:#75715e"># crontab -e with root</span>
 */5 * * * * /etc/mysql/listen.sh
-</code></pre>
-
-<blockquote>
+</code></pre></div><blockquote>
 <p>Following code is <code>listen.sh</code></p>
 </blockquote>
-
-<pre><code class="language-shell">#!/bin/bash
-#apache
-HTTP_CODE=`curl -o /dev/null -s -w &quot;%{http_code}&quot; &quot;http://example.com&quot;`
-if [ $HTTP_CODE != 200 ]; then
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span><span style="color:#75715e">#apache</span>
+HTTP_CODE<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>curl -o /dev/null -s -w <span style="color:#e6db74">&#34;%{http_code}&#34;</span> <span style="color:#e6db74">&#34;http://example.com&#34;</span><span style="color:#e6db74">`</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $HTTP_CODE !<span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
     echo $HTTP_CODE&gt;&gt; /var/log/mysql_listen.log
     service apache2 start
-else
-    echo &quot;lab server running&quot;&gt;&gt; /var/log/mysql_listen.log
-fi
+<span style="color:#66d9ef">else</span>
+    echo <span style="color:#e6db74">&#34;lab server running&#34;</span>&gt;&gt; /var/log/mysql_listen.log
+<span style="color:#66d9ef">fi</span>
 
-#mysql
+<span style="color:#75715e">#mysql</span>
 pgrep mysqld &amp;&gt; /dev/null
-if [ $? -gt 0 ]; then
-    echo &quot;`date` mysql is stop&quot;&gt;&gt; /var/log/mysql_listen.log
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? -gt <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;`date` mysql is stop&#34;</span>&gt;&gt; /var/log/mysql_listen.log
     service mysql start
-else
-    echo &quot;`date` mysql running&quot;&gt;&gt; /var/log/mysql_listen.log
-fi
+<span style="color:#66d9ef">else</span>
+    echo <span style="color:#e6db74">&#34;`date` mysql running&#34;</span>&gt;&gt; /var/log/mysql_listen.log
+<span style="color:#66d9ef">fi</span>
 
-#mongodb
+<span style="color:#75715e">#mongodb</span>
 netstat -anop | grep localhost:port
-if [ $? -ne 1 ]; then
-    echo &quot;`date` mongodb running&quot;&gt;&gt; /var/log/mongodb_listen.log
-else
-    echo $(date +%T%n%F)&quot; Restart mongodb Services &quot; &gt;&gt; /var/log/mongodb_listen.log
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? -ne <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;`date` mongodb running&#34;</span>&gt;&gt; /var/log/mongodb_listen.log
+<span style="color:#66d9ef">else</span>
+    echo <span style="color:#66d9ef">$(</span>date +%T%n%F<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34; Restart mongodb Services &#34;</span> &gt;&gt; /var/log/mongodb_listen.log
     service mongod restart
-fi
-</code></pre>
-
-<h2 id="run-one-time-task-at">Run one time task <code>at</code></h2>
-
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><h2 id="run-one-time-task-at">Run one time task <code>at</code></h2>
 <p>Schedule certain time to start/stop <code>apache</code> service.</p>
-
-<pre><code class="language-shell"># schedule one time process for stop apache2 at 06:00 2019-09-18
-echo &quot;/usr/sbin/service apache2 stop&quot; | at -m 06:00 2019-09-18
-# schedule one time process for start apache2 at 14:00 2019-09-20
-echo &quot;/usr/sbin/service apache2 start&quot; | at -m 14:00 2019-09-20
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># schedule one time process for stop apache2 at 06:00 2019-09-18</span>
+echo <span style="color:#e6db74">&#34;/usr/sbin/service apache2 stop&#34;</span> | at -m 06:00 2019-09-18
+<span style="color:#75715e"># schedule one time process for start apache2 at 14:00 2019-09-20</span>
+echo <span style="color:#e6db74">&#34;/usr/sbin/service apache2 start&#34;</span> | at -m 14:00 2019-09-20
+</code></pre></div>
 
   <footer>
   
@@ -257,12 +236,10 @@ document.addEventListener('keyup', function(e) {
   
   
   
-
-  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><i class='far fa-envelope fa-1x'></i></a> &middot; <a href="https://twitter.com/chunjie_sam_liu"><i class='fab fa-twitter fa-1x'></i></a> &middot; <a href="https://github.com/chunjie-sam-liu"><i class='fab fa-github fa-1x'></i></a> &middot; <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><i class='ai ai-google-scholar ai-1x'></i></a> &middot; <a href="https://orcid.org/0000-0002-3008-3375"><i class='ai ai-orcid ai-1x'></i></a> &middot; <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><i class='ai ai-researchgate ai-1x'></i></a> <br> Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> &copy; <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
+  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://twitter.com/chunjie_sam_liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://github.com/chunjie-sam-liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://orcid.org/0000-0002-3008-3375"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> <!-- raw HTML omitted --> Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> © <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
   
   
 
-  
   </footer>
   </article>
   
