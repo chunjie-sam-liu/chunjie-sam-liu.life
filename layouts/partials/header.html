@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!--- Icons --->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--- Icons --->
-    <!--- <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"> --->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="/fonts/academicons-1.8.6/css/academicons.min.css"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/logo/avatars.jpg"> <!--- Likan Icon --->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,11 +13,8 @@
     <meta property="og:title" content="{{ .Site.Title }}">
     <meta property="og:type" content="website">
     {{ else }}
-    <!--- Use different titles in different Language versions, 20180210 by Likan Zhan --->
     {{ $section := default .Section ($.Scratch.Get "section") }}
     <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ (index $.Site.Params.author $section) }}</title>
-    <!--- Use different titles in different Language versions, 20180210 by Likan Zhan --->
-    <!--- <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title> ---> <!--- LZ 20180210 --->
     <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
     {{ end }}
 
@@ -39,7 +35,6 @@
     {{ end }}
     {{ partial "head_highlightjs" . }}
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
-    <!-- <link rel="stylesheet" href="{{ "/css/mystyle.css" | relURL }}" /> - 20180124 added by Likan Zhan - -->
     <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
     {{ partial "head_custom.html" . }}
   </head>
@@ -60,7 +55,6 @@
         {{ range (default .Site.Menus.main (index .Site.Menus ($.Scratch.Get "section"))) }}
         <li{{ if eq .URL $currentPage.URL }} class="active"{{ end }}><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
-        <!-- {{ partial "menu_extra.html" . }} -->
         </ul>
       </nav>
     </header>
