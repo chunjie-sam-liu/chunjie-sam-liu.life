@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>中文博客 on Chun-Jie Liu | 柳纯洁</title>
@@ -6,10 +6,24 @@
     <description>Recent content in 中文博客 on Chun-Jie Liu | 柳纯洁</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="/cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>科学上网</title>
+      <link>/cn/post/2019-08-28-access-google/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/post/2019-08-28-access-google/</guid>
+      <description>科学上网很多个人博客都有分享，但是每隔一段时间会被删除，就算GitHub shadowsocks也需要做一个rm branch。应该遵守国家相关</description>
+    </item>
     
-	<atom:link href="/cn/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>至暗时刻</title>
+      <link>/cn/post/2019-08-16-darkest-hour/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/post/2019-08-16-darkest-hour/</guid>
+      <description>Hit Bottom 青年基金落选</description>
+    </item>
     
     <item>
       <title>Think like a biologist</title>
@@ -26,7 +40,7 @@
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/cn/post/2019-08-14-blogging/</guid>
-      <description>建站 建立自己的个人博客站 博客 隐私 框架</description>
+      <description>建站 建立自己的个人博客站分享个人感悟，个人感悟是非常 博客 隐私 框架</description>
     </item>
     
   </channel>

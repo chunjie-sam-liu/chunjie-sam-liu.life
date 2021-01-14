@@ -1,6 +1,76 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/en/post/2019-12-26-blink/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-12-05-to-be-an-organizer/</loc>
+    <lastmod>2019-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-11-25-carrer-plan/</loc>
+    <lastmod>2019-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-11-21-a-letter-to-my-daughter/</loc>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-11-18-academic-writing/</loc>
+    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-10-28-be-a-father/</loc>
+    <lastmod>2019-10-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-10-03-rivers-of-no-return/</loc>
+    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-09-17-schedule-process/</loc>
+    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-09-04-usual-config/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-09-02-stubborn/</loc>
+    <lastmod>2019-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-08-30-github-action/</loc>
+    <lastmod>2019-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2019-08-28-blogtrottr/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cn/post/2019-08-28-access-google/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cn/post/2019-08-16-darkest-hour/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
   
   <url>
     <loc>/en/post/2019-08-15-r-parallel-computation/</loc>
@@ -18,7 +88,12 @@
   </url>
   
   <url>
-    <loc>/en/post/2019-08-14-machine-learning-for-rna-seq/</loc>
+    <loc>/en/post/2019-08-24-rnaseq-analysis/</loc>
+    <lastmod>2019-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/project/2019-08-14-machine-learning-for-rna-seq/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -44,7 +119,7 @@
   
   <url>
     <loc>/en/cv-en/chun-jie/</loc>
-    <lastmod>2019-08-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -79,7 +154,7 @@
   
   <url>
     <loc>/cn/cv-cn/chun-jie/</loc>
-    <lastmod>2019-08-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -94,12 +169,10 @@
   
   <url>
     <loc>/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
