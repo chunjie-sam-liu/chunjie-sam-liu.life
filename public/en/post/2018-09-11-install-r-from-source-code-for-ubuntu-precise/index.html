@@ -90,31 +90,19 @@
 
 
 <p>The newest CRAN does not support ubuntu precise anymore.</p>
-
 <p>But some packages need to upgrade the R to &gt; 3.4.0.</p>
-
 <p>So, you have to re-isntall the r from source code, and set repo as &ldquo;cloud.r-project.org&rdquo;, then the install.package will work by install from source code.</p>
-
 <pre><code>options(repos = c(CRAN = &quot;cloud.r-project.org&quot;))
-</code></pre>
-
-<p>First, you should uninstall the r from the server.</p>
-
+</code></pre><p>First, you should uninstall the r from the server.</p>
 <pre><code>apt-get --purge remove r-base
 apt-get --purge remove r-base-core
 apt-get --purge remove r-base-dev
 apt-get autoremove
-</code></pre>
-
-<p>Then, download R source code from <a href="https://cran.r-project.org">https://cran.r-project.org</a></p>
-
+</code></pre><p>Then, download R source code from <a href="https://cran.r-project.org">https://cran.r-project.org</a></p>
 <pre><code>$ tar -zcvr R-3.4.0.tar.gz
 # cd R-3.4.0
 # ./configure
-</code></pre>
-
-<p>It occurs errors.</p>
-
+</code></pre><p>It occurs errors.</p>
 <pre><code>apt-get install liblzma-dev
 ./configure --enable-R-shlib --with-blas --with-lapack
 make
@@ -122,14 +110,10 @@ make check
 
 cp R-3.4.- /usr/local/src
 ln -s ../src/R-3.4.0/bin/R .
-</code></pre>
-
-<p>Third, install rstudio-server</p>
-
+</code></pre><p>Third, install rstudio-server</p>
 <pre><code>rstudio-server verify-installation
 rstudio-server start
 </code></pre>
-
 
   <footer>
   
@@ -232,7 +216,7 @@ document.addEventListener('keyup', function(e) {
   
   
   
-  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><i class='far fa-envelope fa-1x'></i></a> &middot; <a href="https://twitter.com/chunjie_sam_liu"><i class='fab fa-twitter fa-1x'></i></a> &middot; <a href="https://github.com/chunjie-sam-liu"><i class='fab fa-github fa-1x'></i></a> &middot; <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><i class='ai ai-google-scholar ai-1x'></i></a> &middot; <a href="https://orcid.org/0000-0002-3008-3375"><i class='ai ai-orcid ai-1x'></i></a> &middot; <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><i class='ai ai-researchgate ai-1x'></i></a> <br > Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> &copy; <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
+  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://twitter.com/chunjie_sam_liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://github.com/chunjie-sam-liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://orcid.org/0000-0002-3008-3375"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> <!-- raw HTML omitted --> Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> © <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
   
   
 

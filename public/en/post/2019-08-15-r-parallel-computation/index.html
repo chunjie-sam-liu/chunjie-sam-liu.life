@@ -84,44 +84,32 @@
       </header>
 
 
-
-
 <blockquote>
 <p>For detailed parallelization, referring to <a href="https://github.com/ljdursi/beyond-single-core-R">Beyond single core R</a></p>
 </blockquote>
-
 <p>For me, not majored in CS, alwasy hard to comprehend some terms of hardware and software.</p>
-
 <h2 id="hardware-terms">Hardware terms</h2>
-
 <ul>
 <li>Node: A single motherboard with multiple sockets.</li>
 <li>Processor/Socket: the silicon containing multiple cores.</li>
 <li>Core: the unit of computation.</li>
 <li>Pseudo-cores: can appear to the OS as multiple cores.</li>
 </ul>
-
-<p><img src="../../../img/r-parallel/sockets-cores.png" alt="Sockets cores" /></p>
-
+<p><img src="../../../img/r-parallel/sockets-cores.png" alt="Sockets cores"></p>
 <h2 id="software-terms">Software terms</h2>
-
 <p>Interpreted languages generally you can only directly work with processes. You can call libraries that invoke threads (BLAS/LAPACK)</p>
-
 <ul>
 <li>Process: data and code in memory.</li>
 <li>One or more threads of execution within a process.</li>
 <li>Threads in the same process can see most of the same memory.</li>
 <li>Processes generally can not peer into another processes memory.</li>
 </ul>
-
 <h2 id="the-r-parallel-packages">The R parallel packages</h2>
-
 <ul>
 <li><code>parallel</code>: incorporates two pacakges below.</li>
 <li><code>multicore</code>: <strong>forking</strong>, for using all processors on a single processor.</li>
 <li><code>snow</code>: <strong>spawning</strong>, for using any group of processors, possibly across a cluster.</li>
 </ul>
-
 <h2 id="waiting-for-completing">waiting for completing</h2>
 
 
@@ -213,7 +201,7 @@ document.addEventListener('keyup', function(e) {
   
   
   
-  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><i class='far fa-envelope fa-1x'></i></a> &middot; <a href="https://twitter.com/chunjie_sam_liu"><i class='fab fa-twitter fa-1x'></i></a> &middot; <a href="https://github.com/chunjie-sam-liu"><i class='fab fa-github fa-1x'></i></a> &middot; <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><i class='ai ai-google-scholar ai-1x'></i></a> &middot; <a href="https://orcid.org/0000-0002-3008-3375"><i class='ai ai-orcid ai-1x'></i></a> &middot; <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><i class='ai ai-researchgate ai-1x'></i></a> <br > Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> &copy; <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
+  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://twitter.com/chunjie_sam_liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://github.com/chunjie-sam-liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://orcid.org/0000-0002-3008-3375"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> <!-- raw HTML omitted --> Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> © <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
   
   
 

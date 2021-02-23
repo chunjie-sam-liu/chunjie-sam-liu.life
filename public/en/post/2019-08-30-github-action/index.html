@@ -89,35 +89,28 @@
       </header>
 
 
-
-
 <h2 id="github-actions">GitHub Actions</h2>
-
 <p>GitHub actions is a automate build, test and deployment product. DockerHub provides automate building by connecting GitHub repo. However, the DockerHub limit the building storage and limit building time.</p>
-
 <h2 id="automate-build-and-publish-to-dockerhub">Automate build and publish to DockerHub</h2>
-
 <p>Use <a href="https://github.com/chunjie-sam-liu/jrocker">Jrocker</a> as an exmaple to automate build and publish DockerHub. The code chunk as follows.</p>
-
-<pre><code class="language-YAML">on: push
-name: Build &amp; Push containers
-jobs:
-  dockerRegistry:
-    name: Docker Registry
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Docker Registry
-      uses: actions/docker/login@master
-      env:
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-    - name: GitHub Action for Docker
-      uses: actions/docker/cli@master
-      with:
-        args: build -t chunjiesamliu/jrocker:latest . &amp;&amp; docker push chunjiesamliu/jrocker:latest
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#f92672">on</span>: <span style="color:#ae81ff">push</span>
+<span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build &amp; Push containers</span>
+<span style="color:#f92672">jobs</span>:
+  <span style="color:#f92672">dockerRegistry</span>:
+    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Docker Registry</span>
+    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+    <span style="color:#f92672">steps</span>:
+    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@master</span>
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Docker Registry</span>
+      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/docker/login@master</span>
+      <span style="color:#f92672">env</span>:
+        <span style="color:#f92672">DOCKER_PASSWORD</span>: <span style="color:#ae81ff">${{ secrets.DOCKER_PASSWORD }}</span>
+        <span style="color:#f92672">DOCKER_USERNAME</span>: <span style="color:#ae81ff">${{ secrets.DOCKER_USERNAME }}</span>
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">GitHub Action for Docker</span>
+      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/docker/cli@master</span>
+      <span style="color:#f92672">with</span>:
+        <span style="color:#f92672">args</span>: <span style="color:#ae81ff">build -t chunjiesamliu/jrocker:latest . &amp;&amp; docker push chunjiesamliu/jrocker:latest</span>
+</code></pre></div>
 
   <footer>
   
@@ -220,7 +213,7 @@ document.addEventListener('keyup', function(e) {
   
   
   
-  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><i class='far fa-envelope fa-1x'></i></a> &middot; <a href="https://twitter.com/chunjie_sam_liu"><i class='fab fa-twitter fa-1x'></i></a> &middot; <a href="https://github.com/chunjie-sam-liu"><i class='fab fa-github fa-1x'></i></a> &middot; <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><i class='ai ai-google-scholar ai-1x'></i></a> &middot; <a href="https://orcid.org/0000-0002-3008-3375"><i class='ai ai-orcid ai-1x'></i></a> &middot; <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><i class='ai ai-researchgate ai-1x'></i></a> <br > Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> &copy; <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
+  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://twitter.com/chunjie_sam_liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://github.com/chunjie-sam-liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://orcid.org/0000-0002-3008-3375"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> <!-- raw HTML omitted --> Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> © <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
   
   
 

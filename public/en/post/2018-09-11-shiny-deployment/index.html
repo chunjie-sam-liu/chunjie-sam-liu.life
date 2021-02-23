@@ -89,36 +89,22 @@
       </header>
 
 
-
-
 <h2 id="workspace-mode">Workspace mode</h2>
-
 <p>Before pointing workspace to the <code>shiny-server</code> srv directory, change the worksapce mode with <code>g+s</code>.</p>
-
 <pre><code>$chown -R liucj.shiny-apps GSCALite
 $chmod -R g+s GSCALite
 $ln -s GSCALite /srv/shiny-server/
-</code></pre>
-
-<h2 id="apache2-configuration">Apache2 configuration</h2>
-
+</code></pre><h2 id="apache2-configuration">Apache2 configuration</h2>
 <p>The add <code>shiny-server</code> configuration to <code>Aapache2</code>. On Ubuntu system, the <code>Apache2</code> configuration file is <code>000-default.conf</code>.</p>
-
 <p>The default http 80 port was used for default web directory <code>/var/wwww</code>. Change the proxy with provided port.</p>
-
 <pre><code>RewriteEngine on
 RewriteCond %{HTTP:Upgrade} !=websocket
 RewriteRule /web/(.*) http://localhost:port/$1 [P,L]
 ProxyPass /web/ http://localhost:port/
 ProxyPassReverse /web/ http://localhost:port/
-</code></pre>
-
-<h2 id="shiny-server-configuration"><code>shiny-server</code> configuration</h2>
-
+</code></pre><h2 id="shiny-server-configuration"><code>shiny-server</code> configuration</h2>
 <p>Edit <code>shiny-server.conf</code> with root rights with following code.</p>
-
 <p>Instruct Shiny Server to run applications, as the user <strong>shiny</strong> run as shiny, And define a server that listens on port port</p>
-
 <pre><code>server {
   listen port;
 
@@ -137,7 +123,6 @@ ProxyPassReverse /web/ http://localhost:port/
   }
 }
 </code></pre>
-
 
   <footer>
   
@@ -238,7 +223,7 @@ document.addEventListener('keyup', function(e) {
   
   
   
-  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><i class='far fa-envelope fa-1x'></i></a> &middot; <a href="https://twitter.com/chunjie_sam_liu"><i class='fab fa-twitter fa-1x'></i></a> &middot; <a href="https://github.com/chunjie-sam-liu"><i class='fab fa-github fa-1x'></i></a> &middot; <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><i class='ai ai-google-scholar ai-1x'></i></a> &middot; <a href="https://orcid.org/0000-0002-3008-3375"><i class='ai ai-orcid ai-1x'></i></a> &middot; <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><i class='ai ai-researchgate ai-1x'></i></a> <br > Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> &copy; <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
+  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://twitter.com/chunjie_sam_liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://github.com/chunjie-sam-liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://orcid.org/0000-0002-3008-3375"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> <!-- raw HTML omitted --> Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> © <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
   
   
 
