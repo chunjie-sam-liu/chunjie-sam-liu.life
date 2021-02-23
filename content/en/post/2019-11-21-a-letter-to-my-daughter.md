@@ -12,4 +12,6 @@ Dear daughter,
 
 Where to start, let me talk about the day you were born. June 21th is your birthday, you may already known. I'm gonna talk about suffering of the day.
 
+Your mom's water was broken at 5 am, I rushed up to wake up your grandma and grandpa.
+
 
