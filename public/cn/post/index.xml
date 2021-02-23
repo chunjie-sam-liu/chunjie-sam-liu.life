@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>中文博客 on Chun-Jie Liu | 柳纯洁</title>
@@ -6,7 +6,20 @@
     <description>Recent content in 中文博客 on Chun-Jie Liu | 柳纯洁</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="/cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/cn/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cheer up</title>
+      <link>/cn/post/2021-02-23-cheer-up/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/post/2021-02-23-cheer-up/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>科学上网</title>
       <link>/cn/post/2019-08-28-access-google/</link>
@@ -40,7 +53,7 @@
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/cn/post/2019-08-14-blogging/</guid>
-      <description>建站 建立自己的个人博客站分享个人感悟，个人感悟是非常 博客 隐私 框架</description>
+      <description>立站开博 建立博客站，分享个人感悟，观点和经历。 很长时间以来，我都有写纸质日记的习惯，偶尔将一段时间的思考和经历进行总结。纸质版容易丢失，而且</description>
     </item>
     
   </channel>
