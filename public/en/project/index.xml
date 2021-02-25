@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My project on Chun-Jie Liu | 柳纯洁</title>
@@ -6,14 +6,18 @@
     <description>Recent content in My project on Chun-Jie Liu | 柳纯洁</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="/en/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/en/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>RNA-Seq Machine Learning</title>
       <link>/en/project/2019-08-14-machine-learning-for-rna-seq/</link>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/en/project/2019-08-14-machine-learning-for-rna-seq/</guid>
-      <description>Seq data interface  RNA-seq  Importing DESeq2 Recount2 Batch effect   miRNA-seq Metabolism Methylation  Machine/Deep Learning interface MLR, Caret, H2O
+      <description>Seq data interface  RNA-seq  Importing DESeq2 Recount2 Batch effect  miRNA-seq Metabolism Methylation  Machine/Deep Learning interface MLR, Caret, H2O
  Regression model Two class classification Multiclass classification Survival model Cluster analysis Parallel  Shiny package/server  Shiny webserver Shiny bioconductor package  Abortion PIVOT is a great R package for integrative analysis and visualization of transcriptomics data.</description>
     </item>
     

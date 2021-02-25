@@ -89,12 +89,16 @@
       </header>
 
 
+
+
 <p>The configuration files were deposited into my <a href="https://gist.github.com/chunjie-sam-liu">Gist</a>, but the <a href="https://gist.github.com/chunjie-sam-liu">Gist</a> access was blocked. In case of the not accessing, I copyed some configure files here.</p>
+
 <h2 id="config-in-ssh">config in .ssh</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Host *
+
+<pre><code class="language-shell">Host *
   TCPKeepAlive yes
-  ServerAliveInterval <span style="color:#ae81ff">120</span>
-  ServerAliveCountMax <span style="color:#ae81ff">5</span>
+  ServerAliveInterval 120
+  ServerAliveCountMax 5
 
 Host guo-4
   HostName ip
@@ -123,73 +127,83 @@ Host mgt
   HostName ip
   User username
   Port port
-</code></pre></div><h2 id="rstudio_bindingsjson">rstudio_bindings.json</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;commentUncomment&#34;</span> : <span style="color:#e6db74">&#34;Cmd+/&#34;</span>,
-    <span style="color:#f92672">&#34;fold&#34;</span> : <span style="color:#e6db74">&#34;Cmd+[|Alt+Cmd+L|Cmd+F1&#34;</span>,
-    <span style="color:#f92672">&#34;foldAll&#34;</span> : <span style="color:#e6db74">&#34;Alt+Cmd+[&#34;</span>,
-    <span style="color:#f92672">&#34;goToFileFunction&#34;</span> : <span style="color:#e6db74">&#34;Ctrl+/&#34;</span>,
-    <span style="color:#f92672">&#34;unfold&#34;</span> : <span style="color:#e6db74">&#34;Cmd+]|Shift+Alt+Cmd+L|Shift+Cmd+F1&#34;</span>,
-    <span style="color:#f92672">&#34;unfoldAll&#34;</span> : <span style="color:#e6db74">&#34;Alt+Cmd+]&#34;</span>
+</code></pre>
+
+<h2 id="rstudio-bindings-json">rstudio_bindings.json</h2>
+
+<pre><code class="language-json">{
+    &quot;commentUncomment&quot; : &quot;Cmd+/&quot;,
+    &quot;fold&quot; : &quot;Cmd+[|Alt+Cmd+L|Cmd+F1&quot;,
+    &quot;foldAll&quot; : &quot;Alt+Cmd+[&quot;,
+    &quot;goToFileFunction&quot; : &quot;Ctrl+/&quot;,
+    &quot;unfold&quot; : &quot;Cmd+]|Shift+Alt+Cmd+L|Shift+Cmd+F1&quot;,
+    &quot;unfoldAll&quot; : &quot;Alt+Cmd+]&quot;
 }
-</code></pre></div><h2 id="gitconfig">.gitconfig</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>user<span style="color:#f92672">]</span>
-	name <span style="color:#f92672">=</span> chunjie-sam-liu
-	email <span style="color:#f92672">=</span> chunjie-sam-liu@foxmail.com
-<span style="color:#f92672">[</span>color<span style="color:#f92672">]</span>
-	diff <span style="color:#f92672">=</span> auto
-	status <span style="color:#f92672">=</span> auto
-	branch <span style="color:#f92672">=</span> auto
-<span style="color:#f92672">[</span>alias<span style="color:#f92672">]</span>
-	cl <span style="color:#f92672">=</span> clone
-	ad <span style="color:#f92672">=</span> add
-	co <span style="color:#f92672">=</span> checkout
-	ss <span style="color:#f92672">=</span> status
-	cm <span style="color:#f92672">=</span> commit -m
-	br <span style="color:#f92672">=</span> branch -a -vv
-	bd <span style="color:#f92672">=</span> branch -d
-	bu <span style="color:#f92672">=</span> branch -u
-	lg <span style="color:#f92672">=</span> log --color --graph --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39;</span> --abbrev-commit
-	df <span style="color:#f92672">=</span> diff
-	mg <span style="color:#f92672">=</span> merge --no-ff -m
-	rm <span style="color:#f92672">=</span> rm --cached
-	sv <span style="color:#f92672">=</span> status -v -v
-<span style="color:#f92672">[</span>filter <span style="color:#e6db74">&#34;lfs&#34;</span><span style="color:#f92672">]</span>
-	clean <span style="color:#f92672">=</span> git-lfs clean -- %f
-	smudge <span style="color:#f92672">=</span> git-lfs smudge -- %f
-	process <span style="color:#f92672">=</span> git-lfs filter-process
-	required <span style="color:#f92672">=</span> true
-<span style="color:#f92672">[</span>pager<span style="color:#f92672">]</span>
-	branch <span style="color:#f92672">=</span> false
-</code></pre></div><h2 id="rproifle">.Rproifle</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e"># Blogdown options --------------------------------------------------------</span>
-<span style="color:#a6e22e">options</span>(blogdown.author <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Chun-Jie Liu&#34;</span>)
-<span style="color:#a6e22e">options</span>(servr.daemon <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
-<span style="color:#a6e22e">options</span>(blogdown.ext <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;.Rmd&#34;</span>)
-<span style="color:#a6e22e">options</span>(blogdown.subdir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;post&#34;</span>)
-<span style="color:#a6e22e">options</span>(blogdown.yaml.empty <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+</code></pre>
 
-<span style="color:#75715e"># General options ---------------------------------------------------------</span>
-<span style="color:#a6e22e">options</span>(repos <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(CRAN <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://cloud.r-project.org&#34;</span>))
-<span style="color:#a6e22e">options</span>(prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Jrocker&gt;&#34;</span>, digits <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>, show.signif.stars <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
-<span style="color:#a6e22e">options</span>(stringsAsFactors <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+<h2 id="gitconfig">.gitconfig</h2>
 
-<span style="color:#75715e"># ggplot2 v3 options ------------------------------------------------------</span>
-<span style="color:#a6e22e">options</span>(
-  ggplot2.continuous.color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;viridis&#34;</span>,
-  ggplot2.continuous.fill <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;viridis&#34;</span>
+<pre><code class="language-shell">[user]
+	name = chunjie-sam-liu
+	email = chunjie-sam-liu@foxmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	cl = clone
+	ad = add
+	co = checkout
+	ss = status
+	cm = commit -m
+	br = branch -a -vv
+	bd = branch -d
+	bu = branch -u
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit
+	df = diff
+	mg = merge --no-ff -m
+	rm = rm --cached
+	sv = status -v -v
+[filter &quot;lfs&quot;]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pager]
+	branch = false
+</code></pre>
+
+<h2 id="rproifle">.Rproifle</h2>
+
+<pre><code class="language-R"># Blogdown options --------------------------------------------------------
+options(blogdown.author = &quot;Chun-Jie Liu&quot;)
+options(servr.daemon = FALSE)
+options(blogdown.ext = &quot;.Rmd&quot;)
+options(blogdown.subdir = &quot;post&quot;)
+options(blogdown.yaml.empty = TRUE)
+
+# General options ---------------------------------------------------------
+options(repos = c(CRAN = &quot;https://cloud.r-project.org&quot;))
+options(prompt = &quot;Jrocker&gt;&quot;, digits = 4, show.signif.stars = FALSE)
+options(stringsAsFactors = FALSE)
+
+# ggplot2 v3 options ------------------------------------------------------
+options(
+  ggplot2.continuous.color = &quot;viridis&quot;,
+  ggplot2.continuous.fill = &quot;viridis&quot;
 )
 
-<span style="color:#75715e"># First -------------------------------------------------------------------</span>
+# First -------------------------------------------------------------------
 
-.First <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(){
-  <span style="color:#a6e22e">library</span>(magrittr)
+.First &lt;- function(){
+  library(magrittr)
 }
 
-<span style="color:#75715e"># Last --------------------------------------------------------------------</span>
+# Last --------------------------------------------------------------------
 
-.Last <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(){}
-</code></pre></div>
+.Last &lt;- function(){}
+</code></pre>
+
 
   <footer>
   
@@ -292,7 +306,7 @@ document.addEventListener('keyup', function(e) {
   
   
   
-  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://twitter.com/chunjie_sam_liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://github.com/chunjie-sam-liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://orcid.org/0000-0002-3008-3375"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> <!-- raw HTML omitted --> Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> © <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
+  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><i class='far fa-envelope fa-1x'></i></a> &middot; <a href="https://twitter.com/chunjie_sam_liu"><i class='fab fa-twitter fa-1x'></i></a> &middot; <a href="https://github.com/chunjie-sam-liu"><i class='fab fa-github fa-1x'></i></a> &middot; <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><i class='ai ai-google-scholar ai-1x'></i></a> &middot; <a href="https://orcid.org/0000-0002-3008-3375"><i class='ai ai-orcid ai-1x'></i></a> &middot; <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><i class='ai ai-researchgate ai-1x'></i></a> <br > Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> &copy; <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
   
   
 
