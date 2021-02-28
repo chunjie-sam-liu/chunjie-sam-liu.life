@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>中文博客 on Chun-Jie Liu | 柳纯洁</title>
@@ -6,10 +6,15 @@
     <description>Recent content in 中文博客 on Chun-Jie Liu | 柳纯洁</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/cn/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="/cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bystander</title>
+      <link>/cn/post/2021-02-25-bystander/</link>
+      <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/post/2021-02-25-bystander/</guid>
+      <description>诅咒-与众不同 我们很难将“你是与众不同的”恭维看做成“诅咒”。 引领者 参与者 旁观者</description>
+    </item>
     
     <item>
       <title>Cheer up</title>
@@ -17,7 +22,7 @@
       <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>/cn/post/2021-02-23-cheer-up/</guid>
-      <description></description>
+      <description>混乱，无序，无力</description>
     </item>
     
     <item>

@@ -89,91 +89,72 @@
       </header>
 
 
-
-
 <h2 id="reproducibility">Reproducibility</h2>
-
 <p>Reproducibilities are the main issues in research. For wet biological experiments, though following the protocols of paper provided, sometimes, it&rsquo;s hard to reproduce the same results. Data engineering paper provides code to reproduce the figures and tables, but as the working environment differences, often get unexpected results. Providing Docker image can partly solve the reproducible issues as <a href="https://www.nature.com/articles/nbt.4128?draft=collection">Guinney states</a>.</p>
-
 <h2 id="intention">Intention</h2>
-
 <p>I manage several old Ubuntu server before <strong>12.04</strong> with codename <strong>precise</strong> which many resources don&rsquo;t support the &lsquo;<strong>precise</strong>&rsquo;. For some reasons, I can not upgrade the OS. <code>R</code> and <code>Rstudio server</code> that I used in my daily life can not upgrade to <code>3.4.0</code> from system command as I wrote a <a href="2018-09-11-install-r-from-source-code-for-ubuntu-precise.md">blog before to install <code>R</code> from source</a>. The most painful thing is not upgrading <code>R</code> each time, it is the packages that takes long time to install. The intetion was wrote in the <a href="https://github.com/chunjie-sam-liu/jrocker">README</a> in <code>Jrocker</code> <code>GitHub</code> repo.</p>
-
 <h2 id="jrocker">Jrocker</h2>
-
 <p><a href="https://github.com/chunjie-sam-liu/jrocker">Jrocker</a> is the combination of <code>Rstudio server</code>, <code>tidyverse suites</code>, <code>bioconducter</code> and the packages I used in my project.</p>
-
 <p>Reviewed the Biocondutor release core <a href="https://github.com/Bioconductor/bioc_docker/blob/master/out/release_core/Dockerfile"><code>Dockerfile</code></a> code, I plan to build personal running environment for myself <a href="https://hub.docker.com/r/chunjiesamliu/jrocker/">Jrocker</a>.</p>
-
 <ol>
-<li><p>No more using <a href="https://hub.docker.com/r/bioconductor/release_core2/">bioc base2 docker</a> as base image to construct <a href="https://hub.docker.com/r/chunjiesamliu/jrocker/">Jrocker</a>. Now using <a href="https://hub.docker.com/r/rocker/rstudio/"><code>rocker/rstudio</code></a> as base image.</p></li>
-
-<li><p>Outside packages are provided in the <a href="https://github.com/chunjie-sam-liu/jrocker/install-pkgs.R">install-pkgs.R</a>.</p></li>
-
-<li><p>For machine learning and deep learning project, it&rsquo;s hard to integrating the <a href="https://github.com/rstudio/keras">keras</a> into the <a href="https://hub.docker.com/r/chunjiesamliu/jrocker/">Jrocker</a>. Even though <em>JJ Allaire</em> provided a <a href="https://www.github.com/rocker-org/ml">machine learning docker image</a> based on <a href="https://hub.docker.com/r/rocker/rstudio/"><code>rocker/rstudio</code></a>, I cant reproduce the basic keras example on the <a href="https://keras.rstudio.com/index.html">keras tutorial</a>. Now I build a <code>TensorFlow</code> and <code>Keras</code> jupyter notebook basd on  <a href="https://github.com/jupyter/docker-stacks"><code>jupyter/scipy-notebook</code></a>, and name it as <a href="https://github.com/chunjie-sam-liu/jukeras"><code>Jukeras</code></a>. it works fine now.</p></li>
+<li>
+<p>No more using <a href="https://hub.docker.com/r/bioconductor/release_core2/">bioc base2 docker</a> as base image to construct <a href="https://hub.docker.com/r/chunjiesamliu/jrocker/">Jrocker</a>. Now using <a href="https://hub.docker.com/r/rocker/rstudio/"><code>rocker/rstudio</code></a> as base image.</p>
+</li>
+<li>
+<p>Outside packages are provided in the <a href="https://github.com/chunjie-sam-liu/jrocker/install-pkgs.R">install-pkgs.R</a>.</p>
+</li>
+<li>
+<p>For machine learning and deep learning project, it&rsquo;s hard to integrating the <a href="https://github.com/rstudio/keras">keras</a> into the <a href="https://hub.docker.com/r/chunjiesamliu/jrocker/">Jrocker</a>. Even though <em>JJ Allaire</em> provided a <a href="https://www.github.com/rocker-org/ml">machine learning docker image</a> based on <a href="https://hub.docker.com/r/rocker/rstudio/"><code>rocker/rstudio</code></a>, I cant reproduce the basic keras example on the <a href="https://keras.rstudio.com/index.html">keras tutorial</a>. Now I build a <code>TensorFlow</code> and <code>Keras</code> jupyter notebook basd on  <a href="https://github.com/jupyter/docker-stacks"><code>jupyter/scipy-notebook</code></a>, and name it as <a href="https://github.com/chunjie-sam-liu/jukeras"><code>Jukeras</code></a>. it works fine now.</p>
+</li>
 </ol>
-
 <h2 id="run-jrocker">Run jrocker</h2>
-
-<pre><code class="language-shell">docker pull chunjiesamliu/jrocker:latest
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull chunjiesamliu/jrocker:latest
 
 docker run -it --rm chunjiesamliu/jrocker /usr/local/bin/R
 
 docker run -it --rm chunjiesamliu/jrocker /bin/bash
-</code></pre>
-
-<h2 id="run-rstudio-server">Run rstudio server</h2>
-
-<pre><code class="language-shell">docker run -d -p 8686:8787 \
-  -v /home/liucj/:/home/liucj/ \
-  -e USER=liucj -e PASSWORD=&lt;password&gt; \
-  -e USERID=$EUID -e ROOT=TRUE \
-  --name Jrocker chunjiesamliu/jrocker
-</code></pre>
-
-<h2 id="run-r-scripts">Run R scripts</h2>
-
-<pre><code class="language-shell">docker run -i --rm --user $EUID \
-  --entrypoint /usr/local/bin/Rscript \
-  -v /your/path/:/docker/path/ \
-  chunjiesamliu/jrocker /docker/path/product.R
-</code></pre>
-
-<h2 id="run-jrocker-for-multiple-sessions-with-no-conflict">Run Jrocker for multiple sessions with no conflict</h2>
-
+</code></pre></div><h2 id="run-rstudio-server">Run rstudio server</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -d -p 8686:8787 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -v /home/liucj/:/home/liucj/ <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -e USER<span style="color:#f92672">=</span>liucj -e PASSWORD<span style="color:#f92672">=</span>&lt;password&gt; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -e USERID<span style="color:#f92672">=</span>$EUID -e ROOT<span style="color:#f92672">=</span>TRUE <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --name Jrocker chunjiesamliu/jrocker
+</code></pre></div><h2 id="run-r-scripts">Run R scripts</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -i --rm --user $EUID <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --entrypoint /usr/local/bin/Rscript <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -v /your/path/:/docker/path/ <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  chunjiesamliu/jrocker /docker/path/product.R
+</code></pre></div><h2 id="run-jrocker-for-multiple-sessions-with-no-conflict">Run Jrocker for multiple sessions with no conflict</h2>
 <p>Rstudio server can run only one session, when you run one command with long time wait, you don&rsquo;t want to wait to run other command. So using <a href="https://github.com/chunjie-sam-liu/useful-scripts/blob/master/jrocker">jrocker</a> to open other several sessions with no conflict, then save the data as <code>dat.rds.gz</code> to load into your main rstudio session.</p>
-
 <h2 id="rprofile">Rprofile</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># Blogdown options --------------------------------------------------------</span>
+<span style="color:#a6e22e">options</span>(blogdown.author <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Chun-Jie Liu&#34;</span>)
+<span style="color:#a6e22e">options</span>(servr.daemon <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+<span style="color:#a6e22e">options</span>(blogdown.ext <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;.Rmd&#34;</span>)
+<span style="color:#a6e22e">options</span>(blogdown.subdir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;post&#34;</span>)
+<span style="color:#a6e22e">options</span>(blogdown.yaml.empty <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
 
-<pre><code class="language-r"># Blogdown options --------------------------------------------------------
-options(blogdown.author = &quot;Chun-Jie Liu&quot;)
-options(servr.daemon = FALSE)
-options(blogdown.ext = &quot;.Rmd&quot;)
-options(blogdown.subdir = &quot;post&quot;)
-options(blogdown.yaml.empty = TRUE)
+<span style="color:#75715e"># General options ---------------------------------------------------------</span>
+<span style="color:#a6e22e">options</span>(repos <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(CRAN <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://cloud.r-project.org&#34;</span>))
+<span style="color:#a6e22e">options</span>(prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Jrocker&gt;&#34;</span>, digits <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>, show.signif.stars <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+<span style="color:#a6e22e">options</span>(stringsAsFactors <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
 
-# General options ---------------------------------------------------------
-options(repos = c(CRAN = &quot;https://cloud.r-project.org&quot;))
-options(prompt = &quot;Jrocker&gt;&quot;, digits = 4, show.signif.stars = FALSE)
-options(stringsAsFactors = FALSE)
-
-# ggplot2 v3 options ------------------------------------------------------
-options(
-  ggplot2.continuous.color = &quot;viridis&quot;,
-  ggplot2.continuous.fill = &quot;viridis&quot;
+<span style="color:#75715e"># ggplot2 v3 options ------------------------------------------------------</span>
+<span style="color:#a6e22e">options</span>(
+  ggplot2.continuous.color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;viridis&#34;</span>,
+  ggplot2.continuous.fill <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;viridis&#34;</span>
 )
 
-# First -------------------------------------------------------------------
+<span style="color:#75715e"># First -------------------------------------------------------------------</span>
 
-.First &lt;- function(){
-  library(magrittr)
+.First <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(){
+  <span style="color:#a6e22e">library</span>(magrittr)
 }
 
-# Last --------------------------------------------------------------------
+<span style="color:#75715e"># Last --------------------------------------------------------------------</span>
 
-.Last &lt;- function(){}
-</code></pre>
-
+.Last <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(){}
+</code></pre></div>
 
   <footer>
   
@@ -276,7 +257,7 @@ document.addEventListener('keyup', function(e) {
   
   
   
-  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><i class='far fa-envelope fa-1x'></i></a> &middot; <a href="https://twitter.com/chunjie_sam_liu"><i class='fab fa-twitter fa-1x'></i></a> &middot; <a href="https://github.com/chunjie-sam-liu"><i class='fab fa-github fa-1x'></i></a> &middot; <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><i class='ai ai-google-scholar ai-1x'></i></a> &middot; <a href="https://orcid.org/0000-0002-3008-3375"><i class='ai ai-orcid ai-1x'></i></a> &middot; <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><i class='ai ai-researchgate ai-1x'></i></a> <br > Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> &copy; <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
+  <div class="copyright"><a href="mailto:chunjie.sam.liu@gmail.com"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://twitter.com/chunjie_sam_liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://github.com/chunjie-sam-liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://scholar.google.com/citations?user=IBIJfSwAAAAJ&amp;hl=en"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://orcid.org/0000-0002-3008-3375"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> · <a href="https://www.researchgate.net/profile/Chun_Jie_Liu"><!-- raw HTML omitted --><!-- raw HTML omitted --></a> <!-- raw HTML omitted --> Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a> © <a href="../../../">Chun-Jie Liu</a> 2019 - Present </div>
   
   
 

@@ -1,6 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/cn/post/2021-02-25-bystander/</loc>
+    <lastmod>2021-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/project/2021-02-25-mirna-evolution/</loc>
+    <lastmod>2021-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/post/2021-02-25-prognosis-prediction/</loc>
+    <lastmod>2021-02-25T00:00:00+00:00</lastmod>
+  </url>
   
   <url>
     <loc>/cn/post/2021-02-23-cheer-up/</loc>
@@ -93,12 +108,12 @@
   </url>
   
   <url>
-    <loc>/en/project/2019-08-14-machine-learning-for-rna-seq/</loc>
+    <loc>/en/post/2019-08-24-rnaseq-analysis/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/en/post/2019-08-24-rnaseq-analysis/</loc>
+    <loc>/en/project/2019-08-14-machine-learning-for-rna-seq/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -174,12 +189,10 @@
   
   <url>
     <loc>/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
