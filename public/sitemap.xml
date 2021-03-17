@@ -1,198 +1,132 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>/en/post/2021-03-06-chaining/</loc>
+    <lastmod>2021-03-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/cn/post/2021-03-03-amigo/</loc>
+    <lastmod>2021-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/cn/post/2021-03-12-review-paper/</loc>
+    <lastmod>2021-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/cn/post/2021-03-02-reiner/</loc>
+    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/cn/post/2021-02-25-bystander/</loc>
     <lastmod>2021-02-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/project/2021-02-25-mirna-evolution/</loc>
     <lastmod>2021-02-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2021-02-25-prognosis-prediction/</loc>
     <lastmod>2021-02-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/post/2021-02-23-cheer-up/</loc>
     <lastmod>2021-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-12-26-blink/</loc>
     <lastmod>2019-12-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-12-05-to-be-an-organizer/</loc>
     <lastmod>2019-12-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-11-25-carrer-plan/</loc>
     <lastmod>2019-11-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-11-21-a-letter-to-my-daughter/</loc>
     <lastmod>2019-11-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-11-18-academic-writing/</loc>
     <lastmod>2019-11-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-10-28-be-a-father/</loc>
     <lastmod>2019-10-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-10-03-rivers-of-no-return/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-09-17-schedule-process/</loc>
     <lastmod>2019-09-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-09-04-usual-config/</loc>
     <lastmod>2019-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-09-02-stubborn/</loc>
     <lastmod>2019-09-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-08-30-github-action/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-08-28-blogtrottr/</loc>
     <lastmod>2019-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/post/2019-08-28-access-google/</loc>
     <lastmod>2019-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/post/2019-08-16-darkest-hour/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-08-15-r-parallel-computation/</loc>
     <lastmod>2019-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/post/2019-08-15-think-biology/</loc>
     <lastmod>2019-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-08-14-jrocker/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-08-24-rnaseq-analysis/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/project/2019-08-14-machine-learning-for-rna-seq/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2019-08-14-tumor-educated-platelet/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/post/2019-08-14-blogging/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/</loc>
     <lastmod>2019-08-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/about/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/cv-en/chun-jie/</loc>
     <lastmod>2021-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/project/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/post/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/about/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/cv-cn/chun-jie/</loc>
     <lastmod>2021-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2018-09-11-install-r-from-source-code-for-ubuntu-precise/</loc>
     <lastmod>2018-09-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/post/2018-09-11-shiny-deployment/</loc>
     <lastmod>2018-09-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
   </url>
-  
 </urlset>
