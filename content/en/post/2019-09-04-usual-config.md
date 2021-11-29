@@ -43,16 +43,74 @@ Host mgt
   Port port
 ```
 
-## rstudio_bindings.json
+## rstudio-prefs.json
 
 ```json
 {
-    "commentUncomment" : "Cmd+/",
-    "fold" : "Cmd+[|Alt+Cmd+L|Cmd+F1",
-    "foldAll" : "Alt+Cmd+[",
-    "goToFileFunction" : "Ctrl+/",
-    "unfold" : "Cmd+]|Shift+Alt+Cmd+L|Shift+Cmd+F1",
-    "unfoldAll" : "Alt+Cmd+]"
+    "console_double_click_select": true,
+    "save_workspace": "never",
+    "load_workspace": false,
+    "initial_working_directory": "~/github",
+    "soft_wrap_r_files": true,
+    "highlight_selected_line": true,
+    "show_invisibles": true,
+    "show_indent_guides": true,
+    "blinking_cursor": false,
+    "syntax_color_console": true,
+    "scroll_past_end_of_document": true,
+    "highlight_r_function_calls": true,
+    "default_encoding": "UTF-8",
+    "font_size_points": 14,
+    "editor_theme": "Xcode",
+    "posix_terminal_shell": "bash",
+    "panes": {
+        "quadrants": [
+            "Source",
+            "Console",
+            "TabSet2",
+            "TabSet1"
+        ],
+        "tabSet1": [
+            "Files",
+            "Connections",
+            "Packages",
+            "Help",
+            "Tutorial",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Environment",
+            "History",
+            "Plots",
+            "Build",
+            "VCS",
+            "Viewer"
+        ],
+        "hiddenTabSet": [],
+        "console_left_on_top": false,
+        "console_right_on_top": true,
+        "additional_source_columns": 1
+    },
+    "show_last_dot_value": true,
+    "always_save_history": false,
+    "rainbow_parentheses": true,
+    "tab_multiline_completion": true,
+    "code_completion_delay": 100,
+    "python_type": "virtualenv",
+    "python_version": "3.8.10",
+    "python_path": "/opt/virtualenvs/r-tensorflow/bin/python",
+    "server_editor_font_enabled": true,
+    "server_editor_font": "Menlo",
+    "source_with_echo": true,
+    "jobs_tab_visibility": "shown",
+    "show_panel_focus_rectangle": true,
+    "auto_append_newline": true,
+    "strip_trailing_whitespace": true,
+    "auto_save_on_blur": true,
+    "show_help_tooltip_on_idle": true,
+    "limit_visible_console": true,
+    "auto_expand_error_tracebacks": true,
+    "code_completion_characters": 2
 }
 ```
 
