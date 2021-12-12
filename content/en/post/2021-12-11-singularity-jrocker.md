@@ -29,6 +29,8 @@ cd singularity-ce-3.9.2
 ./mconfig --without-suid --prefix=${HOME}/tools/singularity-ce-3.9.2 && \
     make -C ./builddir && \
     make -C ./builddir install
+echo "export PATH=${HOME}/tools/singularity-ce-3.9.2/bin/:\${PATH}" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Use jrocker in Singularity
