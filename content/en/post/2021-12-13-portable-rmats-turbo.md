@@ -117,3 +117,51 @@ nohup docker run -v /workspace/liucj/refdata/star-genome-index-grch38:/refdata \
   --sjdbGTFfile /refdata/Homo_sapiens.GRCh38.104.gtf \
   --sjdbOverhang 100 &
 ```
+
+# Test sample with slurm jobs
+
+```
+#!/usr/bin/env bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=50
+# SBATCH --ntasks-per-node=1
+#SBATCH --mem-per-cpu=10G
+#SBATCH --job-name=rmats-turbo
+#SBATCH --output=${HOME}tmp/errout/rmats-turbo-%j.out
+#SBATCH --error=${HOME}tmp/errout/rmats-turbo-%j.err
+#SBATCH --mail-user=chunjie.sam.liu@gmail.com
+#SBATCH --mail-type=END,FAIL
+# SBATCH --array=1-10
+
+#CASE_NUM=`printf %03d $SLURM_ARRAY_TASK_ID`
+
+# Number of input parameters
+d1=${HOME}scratch/splicing-test-datasets
+d2=${HOME}scratch/splicing-test-output
+d3=${HOME}scratch/splicing-test-tmp
+d4=${HOME}data/refdata/star-genome-index-grch38
+
+module load R
+
+export SINGULARITY_BIND="/scr1/users/liuc9/:/scr1/users/liuc9/,/mnt/isilon/xing_lab/liuc9/:/mnt/isilon/xing_lab/liuc9/,${d1}:${d1},${d2}:${d2},${d3}:${d3},${d4}:${d4}"
+
+echo $SINGULARITY_BIND
+
+cmd="singularity exec --cleanenv \
+  ~/sif/rmats-turbo_latest.sif \
+  rmats.py \
+  --s1 $d1/s1.txt \
+  --s2 $d1/s2.txt \
+  --gtf $d4/Homo_sapiens.GRCh38.104.gtf \
+  --bi $d4 \
+  -t single \
+  --readLength 100 \
+  --nthread 50 \
+  --od $d2 \
+  --tmp $d3 \
+  --novelSS"
+echo $cmd
+eval $cmd
+
+```
