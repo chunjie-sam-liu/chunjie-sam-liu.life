@@ -55,18 +55,16 @@ Slurm job script
 #SBATCH --time=08:00:00
 #SBATCH --signal=USR2
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=24
-#SBATCH --mem=100G
-#SBATCH --output=/home/%u/tmp/errout/rstudio-server.job.%j
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=8192
+#SBATCH --output=/home/%u/tmp/errout/jrocker.job.%j
 # customize --output path as appropriate (to a directory readable only by the user!)
 
 # Create temporary directory to be populated with directories to bind-mount in the container
 # where writable file systems are necessary. Adjust path as appropriate for your computing environment.
-
-workdir=$(python -c 'import tempfile; print(tempfile.mkdtemp())')
+workdir=$(python -c 'import tempfile;from pathlib import Path; print(tempfile.mkdtemp(prefix="jrocker_", dir=str(Path.home()/"tmp/tmp")))')
 
 mkdir -p -m 700 ${workdir}/run ${workdir}/tmp ${workdir}/var/lib/rstudio-server
-
 cat > ${workdir}/database.conf <<END
 provider=sqlite
 directory=/var/lib/rstudio-server
@@ -82,13 +80,13 @@ END
 cat > ${workdir}/rsession.sh <<END
 #!/usr/bin/env bash
 export OMP_NUM_THREADS=${SLURM_JOB_CPUS_PER_NODE}
-export R_LIBS_USER=${HOME}/R/rocker-rstudio/4.0
+export R_LIBS_USER=${HOME}/R/jrocker
 exec rsession "\${@}"
 END
 
 chmod +x ${workdir}/rsession.sh
 
-export SINGULARITY_BIND="${workdir}/run:/run,${workdir}/tmp:/tmp,${workdir}/database.conf:/etc/rstudio/database.conf,${workdir}/rsession.sh:/etc/rstudio/rsession.sh,${workdir}/var/lib/rstudio-server:/var/lib/rstudio-server"
+export SINGULARITY_BIND="${workdir}/run:/run,${workdir}/tmp:/tmp,${workdir}/database.conf:/etc/rstudio/database.conf,${workdir}/rsession.sh:/etc/rstudio/rsession.sh,${workdir}/var/lib/rstudio-server:/var/lib/rstudio-server,/scr1/users/liuc9:/scr1/users/liuc9,/mnt/isilon/xing_lab/liuc9:/mnt/isilon/xing_lab/liuc9"
 
 # Do not suspend idle sessions.
 # Alternative to setting session-timeout-minutes=0 in /etc/rstudio/rsession.conf
@@ -97,6 +95,7 @@ export SINGULARITYENV_RSTUDIO_SESSION_TIMEOUT=0
 
 export SINGULARITYENV_USER=$(id -un)
 export SINGULARITYENV_PASSWORD=$(openssl rand -base64 15)
+
 # get unused socket per https://unix.stackexchange.com/a/132524
 # tiny race condition between the python & singularity commands
 readonly PORT=$(python -c 'import socket; s=socket.socket(); s.bind(("", 0)); print(s.getsockname()[1]); s.close()')
@@ -120,7 +119,7 @@ When done using RStudio Server, terminate the job by:
       scancel -f ${SLURM_JOB_ID}
 END
 
-singularity exec --cleanenv jrocker_latest.sif \
+singularity exec --cleanenv ${HOME}/sif/jrocker_latest.sif \
     rserver --www-port ${PORT} \
             --auth-none=0 \
             --auth-pam-helper-path=pam-helper \
