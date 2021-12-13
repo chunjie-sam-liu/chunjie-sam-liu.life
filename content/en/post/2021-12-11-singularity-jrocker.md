@@ -6,9 +6,9 @@ date: "2021-12-11"
 
 The HPC was not allowed to use Docker, to facilitate the uniformity of running environment with R and rmats-turbo, I built the running environment with Dockerfile and pushed it to Docker Hub with GitHub Actions. Then pull the image from Docker Hub and run it with Singularity.
 
-## Use Singularity with non-privileged user
+# Use Singularity with non-privileged user
 
-### Install Go
+## Install Go
 
 ```
 # Install go
@@ -19,7 +19,7 @@ echo "export PATH=${HOME}/tools/go/bin/:\${PATH}" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### Install Singularity from CE source
+## Install Singularity from CE source
 
 ```
 cd ~/tools
@@ -33,7 +33,7 @@ echo "export PATH=${HOME}/tools/singularity-ce-3.9.2/bin/:\${PATH}" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## Use jrocker in Singularity
+# Use jrocker in Singularity
 
 ```
 singularity pull docker://chunjiesamliu/jrocker:latest
@@ -46,7 +46,7 @@ PASSWORD="🙃" singularity exec --bind run:/run,var-lib-rstudio-server:/var/lib
 
 Pointing your browser to http://hostname:8787, enter your local user ID on the system as the username, and the custom password specified in the PASSWORD environment variable.
 
-## Use jrocker in Singularity with Slurm
+# Use jrocker in Singularity with Slurm
 
 Slurm job script
 
