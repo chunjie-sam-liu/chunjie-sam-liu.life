@@ -32,11 +32,13 @@ executor {
   cpus = 1
   queue = "long"
   memory = "5G"
+
 }
 
 singularity {
   autoMount = true
   enabled = true
+  runOptions = "--bind /scr1/users/liuc9/:/scr1/users/liuc9/,/mnt/isilon/xing_lab/liuc9/:/mnt/isilon/xing_lab/liuc9/"
 }
 ```
 
