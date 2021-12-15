@@ -33,7 +33,7 @@ echo "export PATH=${HOME}/tools/singularity-ce-3.9.2/bin/:\${PATH}" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-# Use jrocker in Singularity
+# Use jrocker/rstudio in Singularity
 
 ```
 singularity pull docker://chunjiesamliu/jrocker:latest
@@ -46,7 +46,7 @@ PASSWORD="🙃" singularity exec --bind run:/run,var-lib-rstudio-server:/var/lib
 
 Pointing your browser to http://hostname:8787, enter your local user ID on the system as the username, and the custom password specified in the PASSWORD environment variable.
 
-# Use jrocker in Singularity with Slurm
+# Use jrocker/rstudio in Singularity with Slurm
 
 Slurm job script
 
