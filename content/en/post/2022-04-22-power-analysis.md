@@ -1,7 +1,7 @@
 ---
 title: "Power Analysis"
 author: "Chun-Jie Liu"
-date: "2021-12-30"
+date: "2022-04-22"
 ---
 
 Power analysis is an important aspect of experimental design. It allows us to determine the sample size required to detect an effect of a given size with a given degree of confidence. Conversely, it allows us to determine the probability of detecting an effect of a given size with a given size with a given level of confidence, under sample size contraints.
