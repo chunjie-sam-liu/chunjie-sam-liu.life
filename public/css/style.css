@@ -55,10 +55,6 @@ h3, h4, h5, h6 {
   font-weight: bold;
   text-align: left;
 }
-p {
-  text-align: justify;
-  text-justify: auto;
-}
 
 blockquote {
   margin: 1em 0;
@@ -166,7 +162,7 @@ body {
 }
 
 .main {
-  width: 70%;
+  width: 700px;
   padding: 32px 10px 20px 50px;
   margin-left: 260px;
   border-left: 3px solid black;

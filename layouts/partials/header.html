@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/fonts/academicons-1.8.6/css/academicons.min.css"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/logo/avatars.jpg"> <!--- Likan Icon --->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{ if eq .URL "/" }}
+    {{ if eq .Permalink "/" }}
     <title>{{ .Site.Title }}</title>
     <meta property="og:title" content="{{ .Site.Title }}">
     <meta property="og:type" content="website">
@@ -18,7 +18,7 @@
     <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
     {{ end }}
 
-    {{ if eq .URL "/" }}
+    {{ if eq .Permalink "/" }}
     <meta property="description" content="{{ .Site.Params.description }}">
     {{ else }}
       {{ if .Description }}
@@ -30,8 +30,8 @@
     <meta property="keywords" content ="{{ delimit .Keywords ", " }}">
     {{ end }}
 
-    {{ if .RSSLink }}
-    <link href="{{ .RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ if .RelPermalink }}
+    <link href="{{ .RelPermalink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
     {{ partial "head_highlightjs" . }}
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
@@ -39,7 +39,7 @@
     {{ partial "head_custom.html" . }}
   </head>
 
-  {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .URL) }}
+  {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .Permalink) }}
   <body class="{{ if .IsHome }}home{{ else }}{{ $.Scratch.Get "section" }}{{ end }}">
     <header class="masthead">
       {{ partial "tagline.html" . }}
@@ -53,7 +53,7 @@
         <ul>
         {{ $currentPage := . }}
         {{ range (default .Site.Menus.main (index .Site.Menus ($.Scratch.Get "section"))) }}
-        <li{{ if eq .URL $currentPage.URL }} class="active"{{ end }}><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <li{{ if eq .Permalink $currentPage.Permalink }} class="active"{{ end }}><a href="{{ .Permalink }}">{{ .Name }}</a></li>
         {{ end }}
         </ul>
       </nav>
