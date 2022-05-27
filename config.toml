@@ -94,7 +94,7 @@ enableGitInfo = false
 
     highlightjsVersion = "9.12.0"
     highlightjsLang = ["r", "yaml", "tex"]
-    highlightjsCDN = "//cdn.bootcss.com"
+    highlightjsCDN = "//cdnjs.cloudflare.com"
     highlightjsTheme = "github"
     dateFormat = "2006-01-02"
 
