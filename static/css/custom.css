@@ -10,7 +10,7 @@
   }
   .main {
     /* margin-left: calc(50% - 250px); */
-    margin-left: calc(20%);
+    margin-left: calc(25%);
   }
 }
 
@@ -18,8 +18,12 @@ body {
   width: auto;
   padding: 0;
 }
+p {
+  text-align: justify;
+  text-justify: auto;
+}
 .main {
-  width: 70%;
+  width: 60%;
   padding: 2em 40px;
   hyphens: auto;
   border-left: none;
