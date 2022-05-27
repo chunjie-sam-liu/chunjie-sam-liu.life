@@ -20,7 +20,6 @@ body {
 }
 p {
   text-align: justify;
-  text-justify: auto;
 }
 .main {
   width: 60%;
