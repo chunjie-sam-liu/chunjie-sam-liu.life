@@ -22,7 +22,7 @@ fontsize: 10pt
 
 # Chun-Jie Liu
 
-- Add: HUST, Wuhan, China
+- Address: HUST, Wuhan, China
 - Email: <chunjie.sam.liu@gmail.com>
 - Personal website: <https://chunjie-sam-liu.life>
 
