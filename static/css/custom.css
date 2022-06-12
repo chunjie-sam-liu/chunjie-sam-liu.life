@@ -10,7 +10,7 @@
   }
   .main {
     /* margin-left: calc(50% - 250px); */
-    margin-left: calc(25%);
+    /* margin-left: calc(25%); */
   }
 }
 
@@ -22,7 +22,8 @@ p {
   text-align: justify;
 }
 .main {
-  width: 60%;
+  /* width: 60%; */
+  width: auto;
   padding: 2em 40px;
   hyphens: auto;
   border-left: none;
