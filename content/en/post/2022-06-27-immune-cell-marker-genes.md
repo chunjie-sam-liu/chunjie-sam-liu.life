@@ -88,3 +88,10 @@ date: "2022-06-27"
 |CD8_Tem |Dmrta1 , Cd163l1 , Lax1 , Gzmk , Fam169b , Il7r , Cd27 , Gzmm , Tbx21 , 5830411N06Rik |
 |CD8_Tex |Gzmk , Cd3e , Klrc1 , Cd160 , Ndufa13, Ociad2 , Gm5797 , Tox , Xist , Cd8a |
 |Naive_CD8_T |Gm13777 , Rpl18a , Zswim4 , Rps29 , Gm13212 , Slco4a1 , Rps11 , Rps8 , Rpl23 , 3000002C10Rik |
+
+## Read object in to R
+
+```
+human <- readr::read_rds(file = "https://chunjie-sam-liu.life/data/human_immune_cell_marker_genes.rds.gz")
+mouse <- readr::read_rds(file = "https://chunjie-sam-liu.life/data/mouse_immune_cell_marker_genes.rds.gz")
+```
