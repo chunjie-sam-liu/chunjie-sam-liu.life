@@ -4,7 +4,7 @@ author: "Chun-Jie Liu"
 date: "2019-08-15"
 ---
 
-> For detailed parallelization, referring to [Beyond single core R](https://github.com/ljdursi/beyond-single-core-R)
+> For detailed parallelization, referring to [Beyond single core R](https://github.com/ljdursi/beyond-single-core-R).
 
 For a no-computer background R user, it is hard to comprehend some terms of hardware and software.
 
@@ -32,3 +32,4 @@ Interpreted languages generally can only directly work with processes. You can c
 - `multicore`: **forking**, for using all processors on a single processor.
 - `snow`: **spawning**, for using any group of processors, possibly across a cluster.
 
+## parallel package
