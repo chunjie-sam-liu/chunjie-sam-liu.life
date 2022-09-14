@@ -6,7 +6,7 @@ date: "2019-08-15"
 
 > For detailed parallelization, referring to [Beyond single core R](https://github.com/ljdursi/beyond-single-core-R)
 
-For me, not majored in CS, alwasy hard to comprehend some terms of hardware and software.
+For a no-computer background R user, it is hard to comprehend some terms of hardware and software.
 
 ## Hardware terms
 
@@ -19,7 +19,7 @@ For me, not majored in CS, alwasy hard to comprehend some terms of hardware and 
 
 ## Software terms
 
-Interpreted languages generally you can only directly work with processes. You can call libraries that invoke threads (BLAS/LAPACK)
+Interpreted languages generally can only directly work with processes. You can call libraries that invoke threads (BLAS/LAPACK)
 
 - Process: data and code in memory.
 - One or more threads of execution within a process.
@@ -32,4 +32,3 @@ Interpreted languages generally you can only directly work with processes. You c
 - `multicore`: **forking**, for using all processors on a single processor.
 - `snow`: **spawning**, for using any group of processors, possibly across a cluster.
 
-## waiting for completing
