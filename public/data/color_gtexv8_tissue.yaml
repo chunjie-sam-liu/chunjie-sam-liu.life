@@ -1,0 +1,350 @@
+tissue:
+- Adipose_Subcutaneous
+- Adipose_Visceral_Omentum
+- Adrenal_Gland
+- Artery_Aorta
+- Artery_Coronary
+- Artery_Tibial
+- Brain_Amygdala
+- Brain_Anterior_cingulate_cortex_BA24
+- Brain_Caudate_basal_ganglia
+- Brain_Cerebellar_Hemisphere
+- Brain_Cerebellum
+- Brain_Cortex
+- Brain_Frontal_Cortex_BA9
+- Brain_Hippocampus
+- Brain_Hypothalamus
+- Brain_Nucleus_accumbens_basal_ganglia
+- Brain_Putamen_basal_ganglia
+- Brain_Spinal_cord_cervical_c-1
+- Brain_Substantia_nigra
+- Breast_Mammary_Tissue
+- Cells_Cultured_fibroblasts
+- Cells_EBV-transformed_lymphocytes
+- Colon_Sigmoid
+- Colon_Transverse
+- Esophagus_Gastroesophageal_Junction
+- Esophagus_Mucosa
+- Esophagus_Muscularis
+- Heart_Atrial_Appendage
+- Heart_Left_Ventricle
+- Kidney_Cortex
+- Liver
+- Lung
+- Minor_Salivary_Gland
+- Muscle_Skeletal
+- Nerve_Tibial
+- Ovary
+- Pancreas
+- Pituitary
+- Prostate
+- Skin_Not_Sun_Exposed_Suprapubic
+- Skin_Sun_Exposed_Lower_leg
+- Small_Intestine_Terminal_Ileum
+- Spleen
+- Stomach
+- Testis
+- Thyroid
+- Uterus
+- Vagina
+- Whole_Blood
+tissuename:
+- Adipose - Subcutaneous
+- Adipose - Visceral (Omentum)
+- Adrenal Gland
+- Artery - Aorta
+- Artery - Coronary
+- Artery - Tibial
+- Brain - Amygdala
+- Brain - Anterior cingulate cortex (BA24)
+- Brain - Caudate (basal ganglia)
+- Brain - Cerebellar Hemisphere
+- Brain - Cerebellum
+- Brain - Cortex
+- Brain - Frontal Cortex (BA9)
+- Brain - Hippocampus
+- Brain - Hypothalamus
+- Brain - Nucleus accumbens (basal ganglia)
+- Brain - Putamen (basal ganglia)
+- Brain - Spinal cord (cervical c-1)
+- Brain - Substantia nigra
+- Breast - Mammary Tissue
+- Cells - Cultured fibroblasts
+- Cells - EBV-transformed lymphocytes
+- Colon - Sigmoid
+- Colon - Transverse
+- Esophagus - Gastroesophageal Junction
+- Esophagus - Mucosa
+- Esophagus - Muscularis
+- Heart - Atrial Appendage
+- Heart - Left Ventricle
+- Kidney - Cortex
+- Liver
+- Lung
+- Minor Salivary Gland
+- Muscle - Skeletal
+- Nerve - Tibial
+- Ovary
+- Pancreas
+- Pituitary
+- Prostate
+- Skin - Not Sun Exposed (Suprapubic)
+- Skin - Sun Exposed (Lower leg)
+- Small Intestine - Terminal Ileum
+- Spleen
+- Stomach
+- Testis
+- Thyroid
+- Uterus
+- Vagina
+- Whole Blood
+nsample:
+- 581
+- 469
+- 233
+- 387
+- 213
+- 584
+- 129
+- 147
+- 194
+- 175
+- 207
+- 204
+- 175
+- 165
+- 170
+- 202
+- 170
+- 126
+- 114
+- 396
+- 483
+- 147
+- 318
+- 368
+- 330
+- 497
+- 465
+- 372
+- 386
+- 73
+- 208
+- 513
+- 144
+- 705
+- 532
+- 167
+- 305
+- 237
+- 221
+- 517
+- 605
+- 174
+- 227
+- 324
+- 322
+- 574
+- 129
+- 141
+- 668
+dbname:
+- AdiposeSubcutaneous
+- AdiposeVisceralOmentum
+- AdrenalGland
+- ArteryAorta
+- ArteryCoronary
+- ArteryTibial
+- BrainAmygdala
+- BrainAnteriorcingulatecortexBA24
+- BrainCaudatebasalganglia
+- BrainCerebellarHemisphere
+- BrainCerebellum
+- BrainCortex
+- BrainFrontalCortexBA9
+- BrainHippocampus
+- BrainHypothalamus
+- BrainNucleusaccumbensbasalganglia
+- BrainPutamenbasalganglia
+- BrainSpinalcordcervicalc1
+- BrainSubstantianigra
+- BreastMammaryTissue
+- CellsCulturedfibroblasts
+- CellsEBVtransformedlymphocytes
+- ColonSigmoid
+- ColonTransverse
+- EsophagusGastroesophagealJunction
+- EsophagusMucosa
+- EsophagusMuscularis
+- HeartAtrialAppendage
+- HeartLeftVentricle
+- KidneyCortex
+- Liver
+- Lung
+- MinorSalivaryGland
+- MuscleSkeletal
+- NerveTibial
+- Ovary
+- Pancreas
+- Pituitary
+- Prostate
+- SkinNotSunExposedSuprapubic
+- SkinSunExposedLowerleg
+- SmallIntestineTerminalIleum
+- Spleen
+- Stomach
+- Testis
+- Thyroid
+- Uterus
+- Vagina
+- WholeBlood
+color1:
+- '#7FC97F'
+- '#BEAED4'
+- '#FDC086'
+- '#386CB0'
+- '#F0027F'
+- '#BF5B17'
+- '#666666'
+- '#1B9E77'
+- '#D95F02'
+- '#7570B3'
+- '#E7298A'
+- '#66A61E'
+- '#E6AB02'
+- '#A6761D'
+- '#A6CEE3'
+- '#1F78B4'
+- '#B2DF8A'
+- '#33A02C'
+- '#FB9A99'
+- '#E31A1C'
+- '#FDBF6F'
+- '#FF7F00'
+- '#CAB2D6'
+- '#6A3D9A'
+- '#B15928'
+- '#FBB4AE'
+- '#B3CDE3'
+- '#CCEBC5'
+- '#DECBE4'
+- '#FED9A6'
+- '#FFFFCC'
+- '#E5D8BD'
+- '#FDDAEC'
+- '#B3E2CD'
+- '#FDCDAC'
+- '#CBD5E8'
+- '#F4CAE4'
+- '#E6F5C9'
+- '#FFF2AE'
+- '#CCCCCC'
+- '#E41A1C'
+- '#377EB8'
+- '#4DAF4A'
+- '#984EA3'
+- '#A65628'
+- '#F781BF'
+- '#999999'
+- '#66C2A5'
+- '#FC8D62'
+color2:
+- '#7FC97F'
+- '#BEAED4'
+- '#FDC086'
+- '#386CB0'
+- '#F0027F'
+- '#BF5B17'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#FFFF33'
+- '#E31A1C'
+- '#FDBF6F'
+- '#FF7F00'
+- '#CAB2D6'
+- '#6A3D9A'
+- '#B15928'
+- '#FBB4AE'
+- '#B3CDE3'
+- '#CCEBC5'
+- '#DECBE4'
+- '#FED9A6'
+- '#FFFFCC'
+- '#E5D8BD'
+- '#FDDAEC'
+- '#B3E2CD'
+- '#FDCDAC'
+- '#CBD5E8'
+- '#F4CAE4'
+- '#E6F5C9'
+- '#FFF2AE'
+- '#CCCCCC'
+- '#E41A1C'
+- '#377EB8'
+- '#4DAF4A'
+- '#984EA3'
+- '#A65628'
+- '#F781BF'
+- '#999999'
+- '#66C2A5'
+- '#FC8D62'
+color_hex:
+- '#FF6600'
+- '#FFAA00'
+- '#33DD33'
+- '#FF5555'
+- '#FFAA99'
+- '#FF0000'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#EEEE00'
+- '#33CCCC'
+- '#AAEEFF'
+- '#CC66FF'
+- '#EEBB77'
+- '#CC9955'
+- '#8B7355'
+- '#552200'
+- '#BB9988'
+- '#9900FF'
+- '#660099'
+- '#22FFDD'
+- '#AABB66'
+- '#99FF00'
+- '#99BB88'
+- '#AAAAFF'
+- '#FFD700'
+- '#FFAAFF'
+- '#995522'
+- '#AAFF99'
+- '#DDDDDD'
+- '#0000FF'
+- '#7777FF'
+- '#555522'
+- '#778855'
+- '#FFDD99'
+- '#AAAAAA'
+- '#006600'
+- '#FF66FF'
+- '#FF5599'
+- '#FF00BB'
